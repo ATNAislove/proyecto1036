@@ -4,7 +4,7 @@
     <body>
         <h2>Registro</h2>
 
-        <form action="">
+        <form action="?action=registrar" method="POST">
         <label for="usuario">Usuario:</label><br>
         <input type="text" id="usuario" name="usuario" value="John"><br>
         <label for="passwd">Contraseña:</label><br>
