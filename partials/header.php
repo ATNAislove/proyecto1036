@@ -6,7 +6,8 @@
   <body>
     <header>
       <ul>
-        <li><a href="default.asp">Principal</a></li>
+        <li><a href="/paginaPrincipal.php">Principal</a></li>
+        <li><a href="/nosotros.php">¿Quines somos?</a></li>
         <li class="dropdown">
           <a href="news.asp" class="dropbtn">Camisetas</a>
           <div class="dropdown-content">
