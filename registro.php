@@ -4,7 +4,7 @@
     <link href="/css/style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <h2>Registro</h2>
+        <h1>Registro</h1>
 
         <form action="?action=registrar" method="POST">
         <label for="usuario">Usuario:</label><br>
