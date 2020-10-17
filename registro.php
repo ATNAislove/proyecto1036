@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
+    <head>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    </head>
     <body>
         <h2>Registro</h2>
 
