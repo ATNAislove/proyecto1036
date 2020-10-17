@@ -1,9 +1,15 @@
 
 /*Estilos comunes*/
+html{
+  min-height: 100%;
+  position:relative;
+}
+body {
+  margin: 0;
+}
 h1, h2{
     text-align: center;
-    color:  #008080;
-    
+    color:  #008080; 
 }
 
 p{
@@ -13,6 +19,7 @@ p{
 form{
     text-align: center;
 }
+
 
 /* Buscador */
 ::-webkit-scrollbar {
