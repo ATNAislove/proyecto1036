@@ -12,7 +12,7 @@ h1, h2{
     color:  #008080; 
 }
 
-p{
+p, label{
     font: 100% arial;
     text-align: center;
 }
@@ -155,6 +155,7 @@ form{
     cursor: pointer;
     display: block;
     font-size: 35px;
+    text-align: center;
 
 }
 
@@ -167,7 +168,7 @@ form{
 #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet,
 #carousel-4:checked ~ .control-4 ~ .carousel-indicators li:nth-child(4) .carousel-bullet,
 #carousel-5:checked ~ .control-5 ~ .carousel-indicators li:nth-child(5) .carousel-bullet {
-    color: #428bca;
+    color: #008080;
 }
 
 #title {
@@ -181,4 +182,21 @@ form{
     font-family: 'Open Sans', sans-serif;
     z-index: 9999;
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+/* Texto en las imagenes del carrusel*/
+.pantalones {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font: 150px arial;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
 }
