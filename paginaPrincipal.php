@@ -7,16 +7,39 @@
 
   <body>
     <!-- Galeria de imagenes -->
-    <div id="slider">
-        <figure>
-          <!-- Modificar las imagenes a nuestro gusto, la primera es un ejemplo de como poner un link en una imagen-->
-            <a href="https://www.dropbox.com/s/f5g7ruz8hdtwe0v/1.png?raw=1"> <img src="https://www.dropbox.com/s/f5g7ruz8hdtwe0v/1.png?raw=1" />
-            <img src="https://www.dropbox.com/s/iyvj8i3d5aaowiw/2.png?raw=1" />
-            <img src="https://www.dropbox.com/s/4cophdhsag4ew28/3.png?raw=1" />
-            <img src="https://www.dropbox.com/s/c3184gcsdeag8ap/4.png?raw=1" />
-            <img src="https://www.dropbox.com/s/iyvj8i3d5aaowiw/2.png?raw=1" />
-        </figure>
+    <div class="carousel">
+    <div class="carousel-inner">
+        <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+        <div class="carousel-item">
+            <img src="http://fakeimg.pl/2000x800/0079D8/fff/?text=Without">
+        </div>
+        <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+        <div class="carousel-item">
+            <img src="http://fakeimg.pl/2000x800/DA5930/fff/?text=JavaScript">
+        </div>
+        <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+        <div class="carousel-item">
+            <img src="http://fakeimg.pl/2000x800/F90/fff/?text=Carousel">
+        </div>
+        <label for="carousel-3" class="carousel-control prev control-1">‹</label>
+        <label for="carousel-2" class="carousel-control next control-1">›</label>
+        <label for="carousel-1" class="carousel-control prev control-2">‹</label>
+        <label for="carousel-3" class="carousel-control next control-2">›</label>
+        <label for="carousel-2" class="carousel-control prev control-3">‹</label>
+        <label for="carousel-1" class="carousel-control next control-3">›</label>
+        <ol class="carousel-indicators">
+            <li>
+                <label for="carousel-1" class="carousel-bullet">•</label>
+            </li>
+            <li>
+                <label for="carousel-2" class="carousel-bullet">•</label>
+            </li>
+            <li>
+                <label for="carousel-3" class="carousel-bullet">•</label>
+            </li>
+        </ol>
     </div>
+</div>
 
 
         <h1>This is a Heading</h1>
