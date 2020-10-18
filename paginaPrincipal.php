@@ -12,28 +12,32 @@
         <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
         <div class="carousel-item">
             <img src="/img/jeans.jpg">
-            <div class="pantalones">Pantalones</div>
+            <div class="texto-centrado">Pantalones</div>
             <div class="bottom-right"><img src="/img/whitelogoAthenaStyle.png"  width="180" height="75"></div>
         </div>
         <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
         <div class="carousel-item">
             <img src="/img/perchero.jpg">
+            <div class="texto-centrado">Regístrate</div>
             <div class="bottom-right"><img src="/img/whitelogoAthenaStyle.png"  width="180" height="75"></div>
         </div>
         <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
         <div class="carousel-item">
             <img src="/img/bosque.jpg">
+            <div class="texto-centrado">¿Quienes somos?</div>
             <div class="bottom-right"><img src="/img/whitelogoAthenaStyle.png"  width="180" height="75"></div>
         </div>
 
         <input class="carousel-open" type="radio" id="carousel-4" name="carousel" aria-hidden="true" hidden="">
         <div class="carousel-item">
             <img src="/img/portada_camisetas.jpg">
+            <div class="texto-centrado">Camisetas</div>
             <div class="bottom-right"><img src="/img/whitelogoAthenaStyle.png"  width="180" height="75"></div>
         </div>
         <input class="carousel-open" type="radio" id="carousel-5" name="carousel" aria-hidden="true" hidden="">
         <div class="carousel-item">
             <img src="/img/vestidos.jpg">
+            <div class="texto-centrado">Vestidos</div>
             <div class="bottom-right"><img src="/img/whitelogoAthenaStyle.png"  width="180" height="75"></div>
         </div>
         <label for="carousel-5" class="carousel-control prev control-1">‹</label>
