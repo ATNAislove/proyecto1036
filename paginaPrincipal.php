@@ -10,11 +10,11 @@
     <div id="slider">
         <figure>
           <!-- Modificar las imagenes a nuestro gusto, la primera es un ejemplo de como poner un link en una imagen-->
-            <a href="https://www.dropbox.com/s/f5g7ruz8hdtwe0v/1.png?raw=1"> <img src="https://www.dropbox.com/s/f5g7ruz8hdtwe0v/1.png?raw=1" />
-            <img src="https://www.dropbox.com/s/iyvj8i3d5aaowiw/2.png?raw=1" />
-            <img src="https://www.dropbox.com/s/4cophdhsag4ew28/3.png?raw=1" />
-            <img src="https://www.dropbox.com/s/c3184gcsdeag8ap/4.png?raw=1" />
-            <img src="https://www.dropbox.com/s/iyvj8i3d5aaowiw/2.png?raw=1" />
+            <a href="/img/portada_camisetas.jpg"> <img src="/img/portada_camisetas.jpg" />
+            <img src="/img/jeans.jpg" />
+            <img src="/img/vestidos.jpg" />
+            <img src="/img/perchero.jpg" />
+            <img src="/img/bosque.jpg" />
         </figure>
     </div>
 

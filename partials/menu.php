@@ -1,6 +1,6 @@
 <nav>
       <ul>
-        <li><a href="./portal.php?action=home&nombre=usuario">Principal</a></li>
+        <li><a href="./portal.php?action=home&nombre=usuario"><img src="/img/whitelogoAthenaStyle.png" width="50" height="25"/></a></li>
         <li><a href="?action=nosotros">¿Quines somos?</a></li>
         <li class="dropdown">
           <a href="news.asp" class="dropbtn">Camisetas</a>
