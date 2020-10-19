@@ -1,5 +1,5 @@
 <?php
-include("./gestionBD.php");
+//include("./gestionBD.php");
 
 function handler($pdo,$table)
 {
@@ -13,10 +13,10 @@ function handler($pdo,$table)
                        
     echo $query;
     try { 
-        $a=array($_REQUEST['client_id'],$_REQUEST['username'], $_REQUEST['passwd']   );
+        $a=array('DEFAULT',$_REQUEST['username'], $_REQUEST['passwd']   );
         print_r ($a);
         $consult = $pdo->prepare($query);
-        $a=$consult->execute(array($_REQUEST['username'], $_REQUEST['passwd']));
+        $a=$consult->execute(array('DEFAULT',$_REQUEST['username'], $_REQUEST['passwd']));
         if (1>$a)echo "InCorrecto";
     
     } catch (PDOExeption $e) {
@@ -24,7 +24,7 @@ function handler($pdo,$table)
     }
 }
 
-$table = "a_cliente";
-var_dump($_POST);
-handler( $pdo,$table);
+//$table = "a_cliente";
+//var_dump($_POST);
+//handler( $pdo,$table);
 ?>

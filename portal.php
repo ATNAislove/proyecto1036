@@ -2,7 +2,7 @@
 <link href="/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <?php
-
+include(dirname(__FILE__)."/includes/registrar.php");
 include(dirname(__FILE__)."/includes/pdo_postgres.php");
 $central = "";
 include(dirname(__FILE__)."/partials/header.php");
@@ -19,6 +19,9 @@ switch ($action) {
 
     case "registro":
         $central = "/registro.php";
+        $table = "usuario";
+        $pdo=getpdo();
+        handler($pdo,$table);
         break;
 
     case "nosotros":

@@ -1,5 +1,4 @@
 <?php
-
 /** The name of the database  */
 define('DB_NAME', 'al375915_al361883_ei1036_42');
 
@@ -36,6 +35,11 @@ function ejecutarSQL($query,$valor) {
 	}
 	return ($consult->fetchAll(PDO::FETCH_ASSOC)); 
 						  
+}
+function getPdo(){
+	global $pdo;
+	if (!isset($pdo)) $pdo = new PDO("pgsql:host=".DB_HOST.";dbname=".DB_NAME,DB_USER,DB_PASSWORD);
+	return $pdo;
 }
 
 ?>

@@ -36,13 +36,13 @@ function ejecutarSQL($pdo,$table,$query,$valor) {
 }
 $table="a_cliente";
 
-$query="CREATE TABLE IF NOT EXISTS  $table (client_id SERIAL PRIMARY KEY, nombre varchar(40) NOT NULL);";
+$query="CREATE TABLE IF NOT EXISTS  $table (client_id SERIAL PRIMARY KEY, username varchar(15) NOT NULL, passwd varchar(15) NOT NULL);";
 
 echo $query;
 
 $a=ejecutarSQL($pdo,$table,$query,[]);
-$query = "INSERT INTO $table (client_id, nombre) VALUES (?,?)";
-$a=ejecutarSQL($pdo,$table,$query,[0,'pp']);
+$query = "INSERT INTO $table (client_id, username, passwd) VALUES (?,?,?)";
+$a=ejecutarSQL($pdo,$table,$query,[0,'pp', 'strawberry']);
 
 if (1>$a) {echo "InCorrecto1";}
 
