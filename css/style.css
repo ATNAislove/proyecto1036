@@ -202,3 +202,57 @@ form{
   bottom: 8px;
   right: 16px;
 }
+
+/*Compra*/
+#compra {
+  font-family: Arial;
+  border-collapse: collapse;
+  width: 90%;
+  margin-right: 20px;
+  margin-left: 70px;
+  margin-bottom: 100px;
+
+}
+
+#compra td, #compra th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+#compra tr:nth-child(even){background-color: #f2f2f2;}
+
+#compra tr:hover {background-color: #ddd;}
+
+#compra th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #008080;
+  color: white;
+  text-align: center;
+}
+/*Botones*/
+
+.button {
+  background-color: #008080; /* Teal */
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  padding: 12px 28px;
+  border-radius: 4px;
+  border: 1px solid white;
+
+}
+#botones{
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.button:hover {
+  background-color: white; /* Green */
+  color: black;
+  border: 2px solid teal;
+}

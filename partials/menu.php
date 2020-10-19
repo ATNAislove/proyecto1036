@@ -2,6 +2,8 @@
       <ul>
         <li><a href="./portal.php?action=home&nombre=usuario"><img src="/img/white3logoAthenaStyle.png" width="60" height="25"/></a></li>
         <li><a href="?action=nosotros">¿Quines somos?</a></li>
+        <li><a href="?action=productos">Productos</a></li>
+        <!--
         <li class="dropdown">
           <a href="news.asp" class="dropbtn">Camisetas</a>
           <div class="dropdown-content">
@@ -18,6 +20,7 @@
             <a href="#">Vestidos Cortos</a>
           </div>
         </li>
+-->
         <li style="float:right"><a href="?action=registro">Registro</a></li>
         <li style="float:right"><a href="?action=cesta"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-basket2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path d="M4 10a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 1 1 2 0v2a1 1 0 0 1-2 0v-2z"/>

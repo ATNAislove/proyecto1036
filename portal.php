@@ -1,6 +1,6 @@
 <?php
 
-//include(dirname(__FILE__)."/includes/pdo_postgres0.php");
+include(dirname(__FILE__)."/includes/pdo_postgres0.php");
 $central = "";
 include(dirname(__FILE__)."/partials/header.php");
 include(dirname(__FILE__)."/partials/menu.php");
@@ -20,6 +20,10 @@ switch ($action) {
 
     case "nosotros":
         $central = "/nosotros.php";
+    break;
+
+    case "productos":
+        $central = "/productos/productos.php";
     break;
 
     case "cesta":
