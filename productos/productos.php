@@ -6,5 +6,7 @@
 <body>
     <h1> Nuestros productos </h1>
 
+    <!-- Galeria de productos -->
+
 </body>
 </html>
