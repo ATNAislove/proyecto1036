@@ -42,11 +42,14 @@ switch ($action) {
         $rows=ejecutarSQL($query,NULL);
         if (is_array($rows)) {/* Creamos un listado como una tabla HTML*/
             print '<table id="compra"><thead>';
+
             foreach ( array_keys($rows[0])as $key) {
                 echo "<th>", $key,"</th>";
+
             }
             print "</thead>";
             foreach ($rows as $row) {
+
                 print "<tr>";
                 foreach ($row as $key => $val) {
                     echo "<td>", $val, "</td>";
@@ -54,6 +57,16 @@ switch ($action) {
                 print "</tr>";
             }
             print "</table>";
+            $hola = '';
+            foreach ($row as $key => $val) {
+               $hola .= $val."#";
+            }
+            #print($hola);
+            $prueba = explode( "#", $hola );
+            $id = $prueba[1];
+            print($id);
+
+
         }
         break;
     
