@@ -3,6 +3,7 @@
         <li><a href="./portal.php?action=home&nombre=usuario"><img src="/img/white3logoAthenaStyle.png" width="60" height="25"/></a></li>
         <li><a href="?action=nosotros">¿Quines somos?</a></li>
         <li><a href="?action=productos">Productos</a></li>
+        <li><a href="?action=listar">Listar</a></li>
         <!--
         <li class="dropdown">
           <a href="news.asp" class="dropbtn">Camisetas</a>

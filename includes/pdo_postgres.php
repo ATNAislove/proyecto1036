@@ -32,7 +32,7 @@ function ejecutarSQL($query,$valor) {
 	catch (PDOException $e) {
 		echo "Failed to get DB handle: " . $e->getMessage() . "\n";
 		echo $query."\n";
-		retun -1;
+		return -1;
 	}
 	return ($consult->fetchAll(PDO::FETCH_ASSOC)); 
 						  

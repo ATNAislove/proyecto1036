@@ -220,9 +220,13 @@ form{
   text-align: center;
 }
 
-#compra tr:nth-child(even){background-color: #f2f2f2;}
+#compra tr:nth-child(even){background-color: #f2f2f2;
+  }
 
-#compra tr:hover {background-color: #ddd;}
+#compra tr{background-color:  #ddd;
+  }
+
+#compra tr:hover {background-color: gray;}
 
 #compra th {
   padding-top: 12px;
