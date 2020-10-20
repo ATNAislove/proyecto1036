@@ -20,30 +20,36 @@
         foreach ($rows as $row) {
 
         foreach ($row as $key => $val) {
-            $cadena.= $val.'#';
+            $cadena.= $val."#";
         }
        
     }
+
         $lista = explode( "##", $cadena );
         #$atributos = array();
+        $aux = array_pop($lista);
 
-
+        #var_dump($lista);
         foreach($lista as $fila){
-            #var_dump($fila);
             #Estoy muy cerca, pero salen fallos raros :´( 
+            
             $atributos = explode( '#', $fila );
+
+            /*
             $produc_id = $atributos[0];
             $nombre = $atributos[1];
             $precio = $atributos[2];
             $descripcion = $atributos[3];
             $img = $atributos[4];
-
+            */
             print "<div> ";
-            print "<a target= href=>";
-            print "<img src= alt= >
+            print "<a target='_blank' href='/img/black2logoAthenaStyle.png'>";
+            print "<img src='/img/black2logoAthenaStyle.png' alt='Forest' width='600' height='400' >
             </a>";
             print "<div>";
-            print ($nombre);
+            print ($atributos[1]);
+            print "<br>";
+            print ($atributos[2]. " €");
             print "</div> 
             </div> ";
 
