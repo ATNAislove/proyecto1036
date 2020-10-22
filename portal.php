@@ -2,8 +2,8 @@
 <link href="/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <?php
-include(dirname(__FILE__)."/includes/registrar.php");
-include(dirname(__FILE__)."/includes/pdo_postgres.php");
+include(dirname(__FILE__)."/includes/registrar_usuario.php");
+include(dirname(__FILE__)."/includes/ejecutarSQL.php");
 $central = "";
 include(dirname(__FILE__)."/partials/header.php");
 include(dirname(__FILE__)."/partials/menu.php");
@@ -20,8 +20,7 @@ switch ($action) {
     case "registro":
         $central = "/registro.php";
         $table = "usuario";
-        $pdo=getpdo();
-        handler($pdo,$table);
+        registrar($pdo,$table);
         break;
 
     case "nosotros":
