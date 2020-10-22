@@ -21,6 +21,31 @@
             <a href="#">Vestidos Cortos</a>
           </div>
         </li>
+
+        /*Version profe*/
+             <nav>
+	<ul>
+		<li>
+			<a href="./portal.php?action=home">Home</a>
+		</li>
+		<li>
+			<a href="?action=listar_productos">Productos</a>
+		</li>
+    
+		"?php" //Sabes como continua, no estoy preparada para cargarme nada
+		/*
+    if (!isset($_SESSION['usuario'])){
+     echo '<li><a href="?action=login">Autentificar</a></li>';
+     echo '<li><a href="?action=registrar_usuario">Registrarme</a></li>';
+    }
+   elseif (isset($_SESSION['usuario']) and $_SESSION['usuario'] == 'admin')
+     echo '<li><a href="?action=registrar_producto">Registrar Producto</a></li>';
+   elseif (isset($_SESSION['usuario']))
+       echo '<li><"<a href="?action=ver_cesta">Cesta de Compra</a></li>';
+       ?>
+       */
+ </ul>
+</nav>
 -->
         <li style="float:right"><a href="?action=registro">Registro</a></li>
         <li style="float:right"><a href="?action=cesta"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-basket2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
