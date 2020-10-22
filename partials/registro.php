@@ -9,8 +9,10 @@
         <form action="?action=registrar" method="POST">
         <label for="usuario">Usuario:</label><br><br>
         <input type="text" id="username" name="username" value="John"><br><br>
+        <label for="correo">Correo:</label><br><br>
+        <input type="text" id="email" name="email" value="John@gmail.com"><br><br>
         <label for="passwd">Contraseña:</label><br><br>
-        <input type="password" id="passwd" name="passwd" value="Doe"><br><br>
+        <input type="password" id="passwd" name="passwd" value="0000"><br><br>
         <input type="submit" value="Enviar">
         </form> 
 
