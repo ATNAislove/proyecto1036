@@ -7,6 +7,7 @@ include(dirname(__FILE__)."/includes/ejecutarSQL.php");
 $central = "";
 include(dirname(__FILE__)."/partials/header.php");
 include(dirname(__FILE__)."/partials/menu.php");
+include(dirname(__FILE__)."/includes/conector_BD.php");
 
 if (isset($_REQUEST['action'])) $action = $_REQUEST["action"];
 else $action = "home";
@@ -18,11 +19,12 @@ switch ($action) {
         break;
 
     case "registro":
-        $central = "/registro.php";
-        $table = "usuario";
-        registrar($pdo,$table);
+        $central = "/partials/registro.php";
         break;
-
+    case "registrar":
+        $table = "usuario";
+        registrar($table);
+        break;
     case "nosotros":
         $central = "/nosotros.php";
     break;

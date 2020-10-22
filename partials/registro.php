@@ -8,7 +8,7 @@
 
         <form action="?action=registrar" method="POST">
         <label for="usuario">Usuario:</label><br><br>
-        <input type="text" id="username" name="usuario" value="John"><br><br>
+        <input type="text" id="username" name="username" value="John"><br><br>
         <label for="passwd">Contraseña:</label><br><br>
         <input type="password" id="passwd" name="passwd" value="Doe"><br><br>
         <input type="submit" value="Enviar">

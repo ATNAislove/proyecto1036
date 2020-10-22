@@ -15,7 +15,7 @@ function registrar($table)
         $a=array($_REQUEST['username'], $_REQUEST['passwd']   );
         print_r ($a);
         $consult = $pdo->prepare($query);
-        $a=$consult->execute(array('DEFAULT',$_REQUEST['username'], $_REQUEST['passwd']));
+        $a=$consult->execute(array($_REQUEST['username'], $_REQUEST['passwd']));
         if (1>$a) echo "<h1> Inserción incorrecta </h1>";
         else echo "<h1> Usuario registrado! </h1>";
 
