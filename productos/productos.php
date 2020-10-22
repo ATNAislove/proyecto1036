@@ -8,14 +8,16 @@
 
     <!-- Galeria de productos -->
     <?php
+    include_once(dirname(__FILE__)."/../includes/table2html.php");
+
         $table = "producto";
-        $query = "SELECT * FROM $table";
         #Ejecuta la sentencia
-        $rows=ejecutarSQL($query,NULL);
+        $rows=table2html($table);
 
         #Hacer una lista de cadenas con todos los atributos
         $lista = array();
         $cadena = '';
+        #var_dump($rows);
 
         foreach ($rows as $row) {
 

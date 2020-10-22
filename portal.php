@@ -9,6 +9,8 @@ include(dirname(__FILE__)."/partials/header.php");
 include(dirname(__FILE__)."/partials/menu.php");
 include(dirname(__FILE__)."/includes/conector_BD.php");
 
+include(dirname(__FILE__)."/includes/table2html.php");
+
 if (isset($_REQUEST['action'])) $action = $_REQUEST["action"];
 else $action = "home";
 $table="producto";
@@ -38,37 +40,7 @@ switch ($action) {
         break;
 
     case "listar":
-        $query = "SELECT     * FROM       $table ";
-
-        $rows=ejecutarSQL($query,NULL);
-        if (is_array($rows)) {/* Creamos un listado como una tabla HTML*/
-            print '<table id="compra"><thead>';
-
-            foreach ( array_keys($rows[0])as $key) {
-                echo "<th>", $key,"</th>";
-
-            }
-            print "</thead>";
-            foreach ($rows as $row) {
-
-                print "<tr>";
-                foreach ($row as $key => $val) {
-                    echo "<td>", $val, "</td>";
-                }
-                print "</tr>";
-            }
-            print "</table>";
-            $hola = '';
-            foreach ($row as $key => $val) {
-               $hola .= $val."#";
-            }
-            #print($hola);
-            $prueba = explode( "#", $hola );
-            $id = $prueba[1];
-            print($id);
-
-
-        }
+        $rows=table2html($table);
         break;
     
     default:
