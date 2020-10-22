@@ -42,30 +42,27 @@
             $descripcion = $atributos[3];
             $img = $atributos[4];
             */
-            print "<div> ";
-            print "<a target='_blank' href='/img/black2logoAthenaStyle.png'>";
-            print "<img src='/img/black2logoAthenaStyle.png' alt='Forest' width='600' height='400' >
+            print "<div class='gallery'> ";
+            print "<a target='_blank' href='/img/perchero.jpg'>";
+            print "<img src='/img/perchero.jpg' alt='Forest' width='600' height='400' >
             </a>";
-            print "<div>";
+            
+            print "<div class='middle'>
+            <div class='text'>";
+            print $atributos[3];
+            print"</div>
+          </div>";
+          
+            print "<div class='desc'>";
             print ($atributos[1]);
             print "<br>";
             print ($atributos[2]. " €");
-            print "</div> 
-            </div> ";
+            print "</div> <br> 
+            <button type='button' class='button' onclick='alert('Compra realizada')'>Añadir a la cesta</button>
+            </div> <br>";
 
         }
-
-        #Separar la cadena en otro array
-
     ?>
-    <!--
-    <div class="gallery">
-  <a target="_blank" href="img_5terre.jpg">
-    <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
--->
 
 </body>
 </html>
