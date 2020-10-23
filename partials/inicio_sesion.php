@@ -4,7 +4,7 @@
     <link href="/css/style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <h1>Registro</h1>
+        <h1>Inicia sesión</h1>
 
         <form action="?action=inicio_sesion" method="POST">
         <label for="usuario">Usuario:</label><br><br>
@@ -13,8 +13,8 @@
         <input type="password" id="passwd" name="passwd" value="0000"><br><br>
         <input type="submit" value="Enviar">
         </form> 
+        <h2>¿Aún no estas registrado? <a href="?action=registro">Regístrate</a></h2>
 
-<p>If you click the "Submit" button, the form-data will be sent to a page called "".</p>
 
     </body>
 </html>
