@@ -4,6 +4,7 @@
 <?php
 include(dirname(__FILE__)."/includes/registrar_usuario.php");
 include(dirname(__FILE__)."/includes/ejecutarSQL.php");
+include(dirname(__FILE__)."/includes/autentificar_usuario.php");
 $central = "";
 include(dirname(__FILE__)."/partials/header.php");
 include(dirname(__FILE__)."/partials/menu.php");
@@ -26,6 +27,12 @@ switch ($action) {
     case "registrar":
         $table = "usuario";
         registrar($table);
+        break;
+    case "inicio_sesion":
+        autentificar_usuario();
+        break;
+    case "entrar":
+        $central = "/partials/inicio_sesion.php";
         break;
     case "nosotros":
         $central = "/nosotros.php";
