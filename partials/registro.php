@@ -16,7 +16,6 @@
         <input type="submit" value="Enviar">
         </form> 
 
-<p>If you click the "Submit" button, the form-data will be sent to a page called "".</p>
 
     </body>
 </html>
