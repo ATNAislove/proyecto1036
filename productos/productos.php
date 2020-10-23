@@ -21,11 +21,11 @@
 
         foreach ($rows as $row) {
 
-        foreach ($row as $key => $val) {
-            $cadena.= $val."#";
-        }
+            foreach ($row as $key => $val) {
+                $cadena.= $val."#";
+            }
        
-    }
+        }
 
         $lista = explode( "##", $cadena );
         #$atributos = array();
@@ -33,7 +33,6 @@
 
         #var_dump($lista);
         foreach($lista as $fila){
-            #Estoy muy cerca, pero salen fallos raros :´( 
             
             $atributos = explode( '#', $fila );
 

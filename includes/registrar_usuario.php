@@ -19,8 +19,9 @@ function registrar($table)
         $a=$consult->execute($a);
         if (1>$a) echo "<h1> Inserción incorrecta. Vuelve a intentarlo con un nombre distinto. </h1>";
         else echo "<h1> Usuario registrado! </h1>";
-
-        //$_SESSION["usuario"] = "normal";
+        
+        $_SESSION['username']=$_REQUEST['username'];
+        $_SESSION["tipo"] = "normal";
     
     } catch (PDOExeption $e) {
         echo ($e->getMessage());

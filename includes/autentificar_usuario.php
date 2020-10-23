@@ -23,7 +23,7 @@ function autentificar_usuario()
 
     global $pdo;
     $table = 'usuario';
-    $query = "SELECT username, passwd FROM  $table WHERE username = $usuario_comillas;";
+    $query = "SELECT username, passwd, tipo FROM  $table WHERE username = $usuario_comillas;";
 	$atributos = $pdo->query($query)->fetchAll(\PDO::FETCH_ASSOC);
     $cadena = '';
     foreach ($atributos as $row) {
@@ -40,7 +40,8 @@ function autentificar_usuario()
     
     if(strcmp($usuario, $atributos[0])==0 && strcmp($contrasenya,$atributos[1])==0){
         print "Bienvenido";
-        
+        $_SESSION['username']=$usuario;
+        $_SESSION['tipo']=$atributos[2];
         return;
     }
 
