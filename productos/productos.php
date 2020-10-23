@@ -1,70 +1,61 @@
+<?php
+#includes
+include_once(dirname(__FILE__)."/../includes/table2html.php");
+?>
+
 <html>
     <head>
     <title>Productos</title>
         <link href="/css/style.css" rel="stylesheet" type="text/css">
     </head>
-<body>
-    <h1> Nuestros productos </h1>
+    <body>
 
-    <!-- Galeria de productos -->
     <?php
-    include_once(dirname(__FILE__)."/../includes/table2html.php");
+ $table = "producto";
+ #Ejecuta la sentencia
+ $rows=table2html($table);
 
-        $table = "producto";
-        #Ejecuta la sentencia
-        $rows=table2html($table);
+ #Hacer una lista de cadenas con todos los atributos
+ $lista = array();
+ $cadena = '';
+ #var_dump($rows);
 
-        #Hacer una lista de cadenas con todos los atributos
-        $lista = array();
-        $cadena = '';
-        #var_dump($rows);
+ foreach ($rows as $row) {
 
-        foreach ($rows as $row) {
+ foreach ($row as $key => $val) {
+     $cadena.= $val."#";
+ }
 
-        foreach ($row as $key => $val) {
-            $cadena.= $val."#";
-        }
-       
-    }
-
-        $lista = explode( "##", $cadena );
+}
+$lista = explode( "##", $cadena );
         #$atributos = array();
         $aux = array_pop($lista);
 
         #var_dump($lista);
         foreach($lista as $fila){
-            #Estoy muy cerca, pero salen fallos raros :´( 
             
             $atributos = explode( '#', $fila );
-
-            /*
-            $produc_id = $atributos[0];
-            $nombre = $atributos[1];
-            $precio = $atributos[2];
-            $descripcion = $atributos[3];
-            $img = $atributos[4];
-            */
-            print "<div class='gallery'> ";
-            print "<a target='_blank' href='/img/perchero.jpg'>";
-            print "<img src='/img/perchero.jpg' alt='Forest' width='600' height='400' >
-            </a>";
-            
-            print "<div class='middle'>
-            <div class='text'>";
-            print $atributos[3];
-            print"</div>
-          </div>";
-          
-            print "<div class='desc'>";
-            print ($atributos[1]);
-            print "<br>";
-            print ($atributos[2]. " €");
-            print "</div> <br> 
-            <button type='button' class='button' onclick='alert('Compra realizada')'>Añadir a la cesta</button>
-            </div> <br>";
-
-        }
     ?>
+    <div class='gallery'>
+    <a target='_blank' href='/img/perchero.jpg'>
+    <img src='/img/perchero.jpg' alt='Forest' width='600' height='400' ></a>
 
-</body>
+    <div class='desc'> 
+    <h2>
+        <?php echo ucwords($atributos[1]) ;?>
+    <br>
+        <?php echo $atributos[2]. " €" ;?>
+    </h2>
+    <a href="?action=add&client_id='$_SESSION[username]' &product='<?php echo $atributos[0]; ?>'"  id="addCesta" class="button" >Añadir a la cesta
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-basket2-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383L5.93 1.757zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm4-1a1 1 0 0 0-1 1v2a1 1 0 1 0 2 0v-2a1 1 0 0 0-1-1z"/>
+</svg>
+</a>
+    </div>
+    </div>
+
+    <br>
+
+        <?php } ?>
+    </body>
 </html>
