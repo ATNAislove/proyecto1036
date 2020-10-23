@@ -2,6 +2,8 @@
 <link href="/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <?php
+session_start();
+
 include(dirname(__FILE__)."/includes/registrar_usuario.php");
 include(dirname(__FILE__)."/includes/ejecutarSQL.php");
 include(dirname(__FILE__)."/includes/autentificar_usuario.php");
@@ -27,9 +29,11 @@ switch ($action) {
     case "registrar":
         $table = "usuario";
         registrar($table);
+        header("location:?action=home");
         break;
     case "inicio_sesion":
         autentificar_usuario();
+        header("location:?action=home");
         break;
     case "entrar":
         $central = "/partials/inicio_sesion.php";
@@ -49,6 +53,12 @@ switch ($action) {
     case "listar":
         $rows=table2html($table);
         break;
+
+    case "salir":
+        session_destroy();
+        session_start();
+        header("location:?action=home");
+    break;
     
     default:
         $data["error"] = "Accion No permitida";
