@@ -16,6 +16,7 @@
           <th>Precio</th>
           <th>Borrar</th>
       </tr>
+      <!-- Encontrar la forma de coger los datos de la URL de add -->
       <tr>
           <td></td><td>Camiseta de manga larga con estampado de flores</td><td></td><td>Total</td><td></td><td></td>
       </tr>
