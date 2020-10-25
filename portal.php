@@ -53,13 +53,21 @@ switch ($action) {
     case "listar":
         $rows=table2html($table);
         break;
-        
+
     case "cesta":
         $central = "/cestaCompra.php";
         break;
 
-    case "encestar":
-        $central = "<p>Todavía no puedo añadir a la cesta</p>"; //tabla compras
+    case "add":
+        /*Añadir a la cesta*/
+        /*Si el usuario no está identificado*/
+        if(isset($_SESSION['username']) && $_SESSION['tipo'] == 'normal'){
+            /*El objeto puede añadirse a la cesta*/
+            print "<p>Cliente registrado</p>";
+        }else{
+            print "<p>Todavía no puedo añadir a la cesta</p>";
+        }
+        //tabla compras
         break;
     case "realizar_compra":
         $central = "<p>Todavía no puedo añadir a la cesta</p>"; //cesta en $_SESSION["cesta"]
