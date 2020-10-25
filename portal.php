@@ -26,18 +26,22 @@ switch ($action) {
     case "registro":
         $central = "/partials/registro.php";
         break;
+
     case "registrar":
         $table = "usuario";
         registrar($table);
         header("location:?action=home");
         break;
+
     case "inicio_sesion":
         autentificar_usuario();
         header("location:?action=home");
         break;
+
     case "entrar":
         $central = "/partials/inicio_sesion.php";
         break;
+
     case "nosotros":
         $central = "/nosotros.php";
     break;
@@ -46,12 +50,19 @@ switch ($action) {
         $central = "/productos/productos.php";
     break;
 
+    case "listar":
+        $rows=table2html($table);
+        break;
+        
     case "cesta":
         $central = "/cestaCompra.php";
         break;
 
-    case "listar":
-        $rows=table2html($table);
+    case "encestar":
+        $central = "<p>Todavía no puedo añadir a la cesta</p>"; //tabla compras
+        break;
+    case "realizar_compra":
+        $central = "<p>Todavía no puedo añadir a la cesta</p>"; //cesta en $_SESSION["cesta"]
         break;
 
     case "salir":
