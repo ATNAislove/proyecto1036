@@ -5,6 +5,7 @@
 session_start();
 
 include(dirname(__FILE__)."/includes/registrar_usuario.php");
+include(dirname(__FILE__)."/includes/nuevo_producto.php");
 include(dirname(__FILE__)."/includes/metodos_cesta.php");
 include(dirname(__FILE__)."/includes/ejecutarSQL.php");
 include(dirname(__FILE__)."/includes/autentificar_usuario.php");
@@ -74,16 +75,21 @@ switch ($action) {
             print "<h2>Para añadir a la cesta debes registrarte</h2>";
             $central = "/partials/registro.php";
         }
-        //tabla compras
         break;
     case "borrar":
         borrarDeLaCesta();
         $central = "/cestaCompra.php";
         break;
+        //tabla compras
     case "realizar_compra":
         $central = "<p>Todavía no puedo añadir a la cesta</p>"; //cesta en $_SESSION["cesta"]
         break;
-
+    case "registrar_producto":
+        $central = "/partials/registrar_producto.php";
+        break;
+    case "nuevo_producto":
+        nuevo_producto();
+        break;
     case "salir":
         session_destroy();
         session_start();
