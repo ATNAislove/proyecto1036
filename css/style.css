@@ -7,9 +7,15 @@ html{
 body {
   margin: 0;
 }
-h1, h2{
+h1{
     text-align: center;
     color:  #008080; 
+}
+
+h2{
+  text-align: center;
+  color:   #333; 7
+  
 }
 
 p, label{

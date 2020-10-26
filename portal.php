@@ -64,11 +64,12 @@ switch ($action) {
         if(isset($_SESSION['username']) && $_SESSION['tipo'] == 'normal'){
             /*El objeto puede añadirse a la cesta*/
             print "<p>Cliente registrado</p>";
-            print $_GET['client_id'];
+            print $_REQUEST['client_id'];
 
             $central = "/cestaCompra.php";
         }else{
-            print "<p>Todavía no puedo añadir a la cesta</p>";
+            print "<h2>Para añadir a la cesta debes registrarte</h2>";
+            $central = "/partials/registro.php";
         }
         //tabla compras
         break;
