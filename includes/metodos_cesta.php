@@ -5,7 +5,10 @@ function addCesta() {
         print('No se ha podido añadir');
         return;
     }
-    if (0< strlen($_SESSION['cesta']))
+    if(!isset($_SESSION['cesta'])){
+        $_SESSION['cesta'] = '';
+    }
+    if (0 == strlen($_SESSION['cesta']))
         $_SESSION['cesta'] .=  $_GET['product'];
     else
         $_SESSION['cesta'] .= '#' . $_GET['product'];
