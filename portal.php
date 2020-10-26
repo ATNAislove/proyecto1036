@@ -73,6 +73,8 @@ switch ($action) {
         }
         //tabla compras
         break;
+    case "borrar":
+        break;
     case "realizar_compra":
         $central = "<p>Todavía no puedo añadir a la cesta</p>"; //cesta en $_SESSION["cesta"]
         break;
