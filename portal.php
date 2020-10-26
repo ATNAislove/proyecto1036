@@ -5,6 +5,7 @@
 session_start();
 
 include(dirname(__FILE__)."/includes/registrar_usuario.php");
+include(dirname(__FILE__)."/includes/metodos_cesta.php");
 include(dirname(__FILE__)."/includes/ejecutarSQL.php");
 include(dirname(__FILE__)."/includes/autentificar_usuario.php");
 $central = "";
@@ -13,7 +14,7 @@ include(dirname(__FILE__)."/partials/menu.php");
 include(dirname(__FILE__)."/includes/conector_BD.php");
 
 include(dirname(__FILE__)."/includes/table2html.php");
-
+$_SESSION["cesta"] = '';
 if (isset($_REQUEST['action'])) $action = $_REQUEST["action"];
 else $action = "home";
 $table="producto";
@@ -65,7 +66,7 @@ switch ($action) {
             /*El objeto puede añadirse a la cesta*/
             print "<p>Cliente registrado</p>";
             print $_GET['client_id'];
-
+            addCesta();
             $central = "/cestaCompra.php";
         }else{
             print "<p>Todavía no puedo añadir a la cesta</p>";

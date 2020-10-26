@@ -17,6 +17,15 @@
           <th>Borrar</th>
       </tr>
       <!-- Encontrar la forma de coger los datos de la URL de add -->
+      <?php
+      $tareas = explode('#', $_SESSION["cesta"]);
+      foreach($tareas as $k => $tarea){
+        if (0 < strlen($tarea)){
+          $link = '/todo.php?action=borrar&pos=' . $k;
+          echo "<li>".$tarea . "  <button href ='" . $link ."' class='boton'>Hecho</button>"."</li>";
+        }
+       }
+      ?>
       <tr>
           <td></td><td>Camiseta de manga larga con estampado de flores</td><td></td><td>Total</td><td></td><td></td>
       </tr>
