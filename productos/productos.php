@@ -22,28 +22,39 @@ include_once(dirname(__FILE__)."/../includes/table2html.php");
  #Hacer una lista de cadenas con todos los atributos
  $lista = array();
  $cadena = '';
- #var_dump($rows);
 
  foreach ($rows as $row) {
-
- foreach ($row as $key => $val) {
-     $cadena.= $val."#";
- }
+    var_dump ($row);
+    foreach ($row as $key => $val) {
+        $cadena.= $val."#";
+        
+    }
+    $cadena.= "@";
+    echo "<br>";
 
 }
-$lista = explode( "##", $cadena );
-        #$atributos = array();
-        $aux = array_pop($lista);
+print $cadena;
+$lista = explode( "@", $cadena );
 
-        #var_dump($lista);
+/*Eliminar el último elemento*/
+$aux = array_pop($lista);
+
         foreach($lista as $fila){
             
             $atributos = explode( '#', $fila );
 
+    
+    if(isset($atributos[4])){
+        $link = $atributos[4];
+    }else{
+        $link = '/img/perchero.jpg' ;
+    }
+    print "Imagen: " .$atributos[4];
     ?>
     <div class='gallery'>
-    <a target='_blank' href='/img/perchero.jpg'>
-    <img src='/img/perchero.jpg' alt='Forest' width='600' height='400' ></a>
+    <a target='_blank' href=<?php echo $link ?> >
+    <img src=<?php echo $link ?> alt='Forest' width='600' height='400' ></a>
+
 
     <div class='desc'> 
     <h2>
