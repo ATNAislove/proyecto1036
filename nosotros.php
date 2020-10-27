@@ -6,12 +6,25 @@
     <body>
         <h1>¿Quienes somos?</h1>
         <p>Somos una tienda de comercio online de venta de ropa al por menor.</p>
-        <p>El término wikinota 1​ (palabra que proviene del hawaiano wiki, «rápido»)2​ alude al nombre que recibe una comunidad virtual, cuyas páginas son editadas directamente desde el navegador, donde los mismos usuarios crean, modifican, corrigen o eliminan contenidos que, habitualmente, comparten. No tiene por qué ser necesariamente un sitio en la web, puesto que hay wikis instalables para uso en el escritorio de un computador personal o que pueden portarse en un llavero USB que lleven un entorno LAMP como, por ejemplo, XAMPP.[cita requerida]<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <p> Athena Style nace con un objetivo, hacer una página lo mejor posible en dos semanas. Para 
+        hacerla además solo se podía usar php y html (y, por supuesto sql) lo que hacía el reto aún mayor.
+        Además, la página debía dedicarse al comercio online. No podía ser una página sencilla que fuese solo 
+        un simple catálogo. Athena significa Atenea, diosa de la sabiduría y la estrategia de combate en la 
+        mitología griega. Y style, por supuesto, significa estilo en inglés. Si los combinamos aparece Athena 
+        Style, el estilo de Atenea. Y como diosa de la sabiduría y estrategia de combate teníamos que seguir 
+        su estilo. ¿Qué haría Atenea en un reto como este? Estrategia, por supuesto. Organización. Teníamos que 
+        compensar nuestra falta de conocimiento en la matería con ser capaces de llegar. Saber, a la hora de 
+        programar no es suficiente, hay que dedicarle tiempo. Sin tiempo, no hay programa. Decidimos sacar 
+        pequeños momentos de nuestro tiempo para la página. No iba a ser fácil, nuestros conocimientos en ese
+        momento eran mínimos. No se si cuando acabemos la primera entrega se nos podrá considerar pros, pero 
+        está claro que si no hubiesemos puesto un mínimo de esfuerzo, no estaríamos aquí, escribiendo una 
+        descripción que espero que nadie lea.
+        
+        Atenea Style apuesta por la moda ética y sostenible. </p>
 
-Los textos o «páginas wiki» tienen títulos únicos. Si se escribe el título de una página wiki en algún sitio de la wiki entre dobles corchetes ([[Título de la página]]), esta palabra se convierte en un «enlace web» a la página correspondiente. De este modo, en una página sobre «alpinismo» puede haber una palabra como «piolet» o «brújula» que esté marcada como palabra perteneciente a un título de página wiki. La mayor parte de las implementaciones de wikis indican en el localizador de recursos uniforme (URL) de la página el propio título de la página wiki (en Wikipedia, ocurre así: es el URL de la página wiki Alpinismo), lo que facilita el uso y la aplicación general del enlace fuera del propio sitio web. Además, esto permite formar en muchas ocasiones una coherencia terminológica, y genera una ordenación natural del contenido.[cita requerida]
+        <img class = "logo" src="img\black2logoAthenaStyle.png" >
 
-Su principal tarea, a la que le debe su fama hasta el momento, ha sido la creación de enciclopedias colectivas, género al que pertenece Wikipedia. Existen muchas otras aplicaciones más cercanas a la coordinación de informaciones y acciones, o la puesta en común de conocimientos o textos dentro de grupos. La mayor parte de las wikis actuales conservan un historial de cambios que permite recuperar fácilmente cualquier estado anterior y ver qué usuario hizo cada cambio, lo cual facilita el mantenimiento conjunto y el control de usuarios nocivos. Habitualmente, sin necesidad de una revisión previa, se actualiza el contenido que muestra la página wiki e</p>
-
+        <br>
 <!--
 <a href="/portal.php?action=home&nombre=usuario" class="button">Hola</a>
 -->
