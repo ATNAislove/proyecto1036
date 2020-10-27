@@ -15,6 +15,7 @@
       </tr>
       <!-- Encontrar la forma de coger los datos de la URL de add -->
       <?php
+      include_once(dirname(__FILE__)."/includes/metodos_cesta.php");
       if(isset($_SESSION["cesta"])){
         $tareas = explode('#', $_SESSION["cesta"]);
       }else{
@@ -37,6 +38,10 @@
 
 
         }
+       }
+
+       if(contarCesta() == 0){
+         echo "<h2> La cesta está vacía </h2>";
        }
       ?>
   </table>
