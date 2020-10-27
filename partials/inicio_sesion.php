@@ -11,7 +11,7 @@
         <input type="text" id="username" name="username" value="John"><br><br>
         <label for="passwd">Contraseña:</label><br><br>
         <input type="password" id="passwd" name="passwd" value="0000"><br><br>
-        <input type="submit" value="Enviar">
+        <input type="submit" class="button" value="Enviar">
         </form> 
         <h2>¿Aún no estas registrado? <a href="?action=registro">Regístrate</a></h2>
 

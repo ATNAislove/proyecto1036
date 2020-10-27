@@ -15,7 +15,7 @@
         <input type="text" id="descripcion" name="descripcion" value="camiseta simple"><br><br>
         <label for="img">Imagen:</label><br><br>
         <input type="text" id="img" name="img" value="/img/bosque.jpg"><br><br>
-        <input type="submit" value="Enviar">
+        <input type="submit" class="button" value="Enviar">
         </form> 
 
 
