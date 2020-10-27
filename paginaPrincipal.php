@@ -71,7 +71,8 @@
 </div>
 
 
-        <h1>This is a Heading</h1>
-        <p>This is a paragraph.</p>
+        <h1>Bienvenido a Athena Style</h1>
+        <p>Esta es una página de ropa cuyo objetivo es 100% académico. Todos los productos que 
+        verás en venta están ahí por un motivo, demostrar que podemos hacerlo.</p>
   </body>
 </html>
