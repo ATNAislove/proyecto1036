@@ -23,14 +23,16 @@ function add_compra()
             $data["error"] = "La cesta esta vacia";
             return 0;
         }else{
-            return count($vec);
-            $cantidad = 1;
-            $a=array($vec[],$_SESSION['username'], date( "Y-m-d"),$cantidad);
-            //print_r ($a);
-            $consult = $pdo->prepare($query);
-            $a=$consult->execute($a);
-            if (1>$a) echo "<h1> Inserción incorrecta. No se ha podido procesar la compra. </h1>";
-            else echo "<h1> Compra procesada! </h1>";
+            //$cantidad = 1;
+            $fecha=date( "Y-m-d");
+            foreach($vec as $k){
+                $a=array($k,$_SESSION['username'], $fecha, 1);
+                //print_r ($a);
+                $consult = $pdo->prepare($query);
+                $a=$consult->execute($a);
+                if (1>$a) echo "<h1> Inserción incorrecta. No se ha podido procesar la compra. </h1>";
+                else echo "<h1> Compra procesada! </h1>";
+            }
         }
         
     

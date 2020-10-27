@@ -6,6 +6,7 @@ session_start();
 
 include(dirname(__FILE__)."/includes/registrar_usuario.php");
 include(dirname(__FILE__)."/includes/nuevo_producto.php");
+include(dirname(__FILE__)."/includes/add_compra.php");
 include(dirname(__FILE__)."/includes/metodos_cesta.php");
 include(dirname(__FILE__)."/includes/ejecutarSQL.php");
 include(dirname(__FILE__)."/includes/autentificar_usuario.php");
@@ -84,6 +85,7 @@ switch ($action) {
     case "realizar_compra":
         add_compra();
         $_SESSION['cesta'] = '';
+        $central = "/cestaCompra.php";
         break;
     case "registrar_producto":
         $central = "/partials/registrar_producto.php";

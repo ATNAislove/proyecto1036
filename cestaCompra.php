@@ -64,8 +64,7 @@
   </table>
   <div class="botones">
   <?php
-  $enlace ="?action=realizar_compra";
-  echo "<a href=";echo $enlace;echo"id='aceptar' class='button'>Aceptar</a>";
+  echo "<a href='?action=realizar_compra' id='aceptar' class='button'>Aceptar</a>";
   //<button type="button" class="button" onclick="alert('Compra realizada')">Aceptar</button>
   ?>
   <button type="button" class="button" onclick="alert('Compra cancelada')">Cancelar</button>
