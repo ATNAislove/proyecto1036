@@ -10,6 +10,8 @@
   <table id = "compra">
       <tr>
           <th>Código de producto</th>
+          <th>Nombre</th>
+          <th>Precio</th>
           <th>Borrar</th>
 
       </tr>
@@ -27,13 +29,21 @@
         if (0 < strlen($tarea)){
           $link = '?action=borrar&pos=' . $k;
           echo "<tr>";
-          echo "<td>"; echo $tarea; 
-          $query = "SELECT nombre FROM producto WHERE produc_id = $tarea";
+          echo "<td>"; echo $tarea; echo "</td>";
+          $query = "SELECT * FROM producto WHERE produc_id = $tarea";
           $rows = ejecutarQuery($query);
+          foreach ($rows as $row){
+            echo "<td>";
+            echo ucwords($row["nombre"]);
+            echo "</td>";
+            
+            echo "<td>";
+            echo $row["precio"];
+            echo " € </td>";
+            
+          }
 
-          echo "</td>
-          
-          <td>";   
+          echo "<td>";   
 
 
           echo "    <a href="; echo $link; echo"  id='borrar' class='button' ><svg width='1em' height='1em' viewBox='0 0 16 16' class='bi bi-trash-fill' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
