@@ -24,16 +24,14 @@ include_once(dirname(__FILE__)."/../includes/table2html.php");
  $cadena = '';
 
  foreach ($rows as $row) {
-    var_dump ($row);
     foreach ($row as $key => $val) {
         $cadena.= $val."#";
         
     }
     $cadena.= "@";
-    echo "<br>";
 
 }
-print $cadena;
+
 $lista = explode( "@", $cadena );
 
 /*Eliminar el último elemento*/
@@ -49,7 +47,6 @@ $aux = array_pop($lista);
     }else{
         $link = '/img/perchero.jpg' ;
     }
-    print "Imagen: " .$atributos[4];
     ?>
     <div class='gallery'>
     <a target='_blank' href=<?php echo $link ?> >
