@@ -28,5 +28,4 @@ function table2html($table){
         return $rows;
 }
 }
-
 ?>

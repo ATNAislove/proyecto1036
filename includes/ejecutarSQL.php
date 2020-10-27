@@ -17,4 +17,15 @@ function ejecutarSQL($query,$valor) {
     return $a;
 						  
 }
+
+
+function ejecutarQuery($query){
+    global $pdo;
+    
+    $rows = $pdo->query($query)->fetchAll(\PDO::FETCH_ASSOC);
+
+    if (is_array($rows)) {/* Ejecutar query*/
+        return $rows;
+}
+}
 ?>
