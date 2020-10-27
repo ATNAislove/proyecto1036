@@ -71,7 +71,6 @@ switch ($action) {
             print $_REQUEST['client_id'];
             addCesta();
             header("location:?action=productos");
-            $central = "/productos/productos.php";
         }else{
             print "<h2>Para añadir a la cesta debes registrarte</h2>";
             $central = "/partials/registro.php";
@@ -80,7 +79,6 @@ switch ($action) {
     case "borrar":
         borrarDeLaCesta();
         header("location:?action=cesta");
-        $central = "/cestaCompra.php";
         break;
         //tabla compras
     case "realizar_compra":
