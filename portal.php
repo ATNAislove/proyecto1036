@@ -67,8 +67,8 @@ switch ($action) {
         /*Si el usuario no está identificado*/
         if(isset($_SESSION['username']) && $_SESSION['tipo'] == 'normal'){
             /*El objeto puede añadirse a la cesta*/
-            print "<p>Cliente registrado</p>";
-            print $_REQUEST['client_id'];
+            //print "<p>Cliente registrado</p>";
+            //print $_REQUEST['client_id'];
             addCesta();
             header("location:?action=productos");
         }else{
@@ -82,7 +82,8 @@ switch ($action) {
         break;
         //tabla compras
     case "realizar_compra":
-        $central = "<p>Todavía no puedo añadir a la cesta</p>"; //cesta en $_SESSION["cesta"]
+        add_compra();
+        $_SESSION['cesta'] = '';
         break;
     case "registrar_producto":
         $central = "/partials/registrar_producto.php";

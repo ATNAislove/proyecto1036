@@ -3,7 +3,7 @@ function registrar($table)
 {
     global $pdo;
     $datos = $_REQUEST;
-    if (count($_REQUEST) < 3) {
+    if (count($_REQUEST) < 4) {
         $data["error"] = "No has rellenado el formulario correctamente";
         return;
     }
