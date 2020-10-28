@@ -4,6 +4,7 @@
 <?php
 session_start();
 
+include(dirname(__FILE__)."/includes/listar.php");
 include(dirname(__FILE__)."/includes/registrar_usuario.php");
 include(dirname(__FILE__)."/includes/nuevo_producto.php");
 include(dirname(__FILE__)."/includes/add_compra.php");
@@ -55,8 +56,9 @@ switch ($action) {
         $central = "/partials/productos/productos.php";
     break;
 
-    case "listar":
-        $rows=table2html($table);
+    case "listar_pedidos":
+        $tabla = "compra";
+        listar($tabla);
         break;
 
     case "cesta":

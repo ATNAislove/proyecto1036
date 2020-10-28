@@ -14,6 +14,7 @@
         }
         else{
            if($_SESSION['tipo'] == 'admin'){
+                echo '<li><a href="?action=listar_pedidos">Listar pedidos</a></li>';
                 echo '<li><a href="?action=registrar_producto">Registrar Producto</a></li>';
            }elseif ($_SESSION['tipo'] == 'normal'){
              if(!isset($_SESSION['cestaCompra'])){

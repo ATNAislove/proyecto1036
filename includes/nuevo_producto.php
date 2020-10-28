@@ -2,7 +2,6 @@
 function nuevo_producto()
 {
     global $pdo;
-    $datos = $_REQUEST;
     $table = "producto";
     if (count($_REQUEST) < 4) {
         $data["error"] = "No has rellenado el formulario correctamente";
