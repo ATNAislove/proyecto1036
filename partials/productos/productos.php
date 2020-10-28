@@ -1,6 +1,6 @@
 <?php
 #includes
-include_once(dirname(__FILE__)."/../includes/table2html.php");
+include_once(dirname(__FILE__)."/../../includes/table2html.php");
 ?>
 
 <html>

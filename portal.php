@@ -25,7 +25,7 @@ $table="producto";
 switch ($action) {
 
     case "home":
-        $central = "/paginaPrincipal.php";
+        $central = "/partials/paginaPrincipal.php";
         break;
 
     case "registro":
@@ -48,11 +48,11 @@ switch ($action) {
         break;
 
     case "nosotros":
-        $central = "/nosotros.php";
+        $central = "/partials/nosotros.php";
     break;
 
     case "productos":
-        $central = "/productos/productos.php";
+        $central = "/partials/productos/productos.php";
     break;
 
     case "listar":
@@ -60,7 +60,7 @@ switch ($action) {
         break;
 
     case "cesta":
-        $central = "/cestaCompra.php";
+        $central = "/partials/cestaCompra.php";
         break;
 
     case "add":
@@ -88,7 +88,7 @@ switch ($action) {
     case "realizar_compra":
         add_compra();
         vaciarCesta();
-        $central = "/cestaCompra.php";
+        $central = "/partials/cestaCompra.php";
         break;
     case "vaciar_cesta":
         vaciarCesta();
@@ -99,6 +99,7 @@ switch ($action) {
         break;
     case "nuevo_producto":
         nuevo_producto();
+        $central = "/partials/registrar_producto.php";
         break;
     case "salir":
         session_destroy();

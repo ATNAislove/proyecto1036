@@ -26,8 +26,14 @@ function add_compra()
                 //print_r ($a);
                 $consult = $pdo->prepare($query);
                 $a=$consult->execute($a);
-                if (1>$a) echo "<h1> Inserción incorrecta. No se ha podido procesar la compra. </h1>";
-                else echo "<h1> Compra procesada! </h1>";
+                if (1>$a) echo'<div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span> 
+                <strong>Inserción incorrecta!</strong> No se ha podido procesar la compra.
+              </div>';//echo "<h1> Inserción incorrecta. No se ha podido procesar la compra. </h1>";
+                else echo'<div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span> 
+                <strong>Éxito!</strong> Compra procesada correctamente.
+              </div>';//echo "<h1> Compra procesada! </h1>";
             }
         }
         

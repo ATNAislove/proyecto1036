@@ -6,9 +6,7 @@
     <body>
         <h1>¿Quienes somos?</h1>
         <p>Somos una tienda de comercio online de venta de ropa al por menor.</p>
-        <?php $vec = explode('#', $_SESSION["cesta"]);
         
-        var_dump(date( 'Y-m-d'));?>
         <p> Athena Style nace con un objetivo, hacer una página lo mejor posible en dos semanas. Para 
         hacerla además solo se podía usar php y html (y, por supuesto sql) lo que hacía el reto aún mayor.
         Además, la página debía dedicarse al comercio online. No podía ser una página sencilla que fuese solo 

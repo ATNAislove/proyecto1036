@@ -26,7 +26,7 @@
       <!-- Encontrar la forma de coger los datos de la URL de add -->
       <?php
 
-      include_once(dirname(__FILE__)."/includes/metodos_cesta.php");
+      include_once(dirname(__FILE__)."/../includes/metodos_cesta.php");
       if(isset($_SESSION["cesta"])){
         $tareas = explode('#', $_SESSION["cesta"]);
       }else{

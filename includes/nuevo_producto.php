@@ -17,8 +17,14 @@ function nuevo_producto()
         //print_r ($a);
         $consult = $pdo->prepare($query);
         $a=$consult->execute($a);
-        if (1>$a) echo "<h1> Inserción incorrecta. </h1>";
-        else echo "<h1> Producto añadido correctamente! </h1>";
+        if (1>$a) echo'<div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span> 
+        <strong>Inserción incorrecta!</strong> No se ha podido añadir el producto.
+      </div>';//echo "<h1> Inserción incorrecta. </h1>";
+        else echo'<div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span> 
+        <strong>Éxito!</strong> Producto añadido correctamente.
+      </div>';//echo "<h1> Producto añadido correctamente! </h1>";
     
     } catch (PDOExeption $e) {
         echo ($e->getMessage());
