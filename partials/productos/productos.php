@@ -28,9 +28,13 @@ foreach($rows as $row){
     }
     ?>
     <div class='gallery'>
-    <a target='_blank' href=<?php echo $link ?> >
-    <img src=<?php echo $link ?> alt='Forest' width='600' height='400' ></a>
-
+    <div class='container'>
+        <a target='_blank' href=<?php echo $link ?> >
+        <img src=<?php echo $link ?> alt='Forest' width='600' height='400' ></a>
+        <div class="overlay">
+            <div class="text"><?php echo ucfirst($row['descripcion']) ?></div>
+        </div>
+    </div>
 
     <div class='desc'> 
     <h2>
