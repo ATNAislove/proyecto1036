@@ -2,12 +2,8 @@
 function add_compra()
 {
     global $pdo;
-    $datos = $_REQUEST;
     $table = "compra";
-    if (count($_REQUEST) < 4) {
-        $data["error"] = "No has rellenado el formulario correctamente";
-        return;
-    }
+    
     $query = "INSERT INTO     $table (produc_id, username, fecha_compra, cantidad)
                         VALUES (?,?,?,?)";
                        
@@ -23,10 +19,10 @@ function add_compra()
             $data["error"] = "La cesta esta vacia";
             return 0;
         }else{
-            //$cantidad = 1;
-            $fecha=date( "Y-m-d");
+            $cantidad = 1;
+            $fecha=date( 'Y-m-d');
             foreach($vec as $k){
-                $a=array($k,$_SESSION['username'], $fecha, 1);
+                $a=array(intval($k),$_SESSION['username'], $fecha, $cantidad);
                 //print_r ($a);
                 $consult = $pdo->prepare($query);
                 $a=$consult->execute($a);
