@@ -73,8 +73,11 @@ switch ($action) {
             addCesta();
             header("location:?action=productos");
         }else{
-            print "<h2>Para añadir a la cesta debes registrarte</h2>";
-            $central = "/partials/registro.php";
+            echo'<div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span> 
+            <strong>Aviso!</strong> Para añadir a la cesta debes iniciar sesion.
+          </div>';
+            $central = "/partials/inicio_sesion.php";
         }
         break;
     case "borrar":
@@ -84,8 +87,12 @@ switch ($action) {
         //tabla compras
     case "realizar_compra":
         add_compra();
-        $_SESSION['cesta'] = '';
+        vaciarCesta();
         $central = "/cestaCompra.php";
+        break;
+    case "vaciar_cesta":
+        vaciarCesta();
+        header("location:?action=cesta");
         break;
     case "registrar_producto":
         $central = "/partials/registrar_producto.php";

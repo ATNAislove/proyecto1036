@@ -6,6 +6,14 @@
     <link href="/css/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
+  <?php 
+    if(contarCesta()==0){
+      echo'<div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span> 
+        <strong>Aviso!</strong> La cesta está vacía.
+      </div>';
+    }
+  ?>
   <h1> Cesta de la compra </h1>
   <table id = "compra">
       <tr>
@@ -57,17 +65,18 @@
         }
        }
 
-       if(contarCesta() == 0){
+       /*if(contarCesta() == 0){
+        
          echo "<h2> La cesta está vacía </h2>";
-       }
+       }*/
       ?>
   </table>
   <div class="botones">
-  <?php
-  echo "<a href='?action=realizar_compra' id='aceptar' class='button'>Aceptar</a>";
-  //<button type="button" class="button" onclick="alert('Compra realizada')">Aceptar</button>
-  ?>
-  <button type="button" class="button" onclick="alert('Compra cancelada')">Cancelar</button>
+  
+  <a href='?action=realizar_compra' id='aceptar' class='button'>Aceptar</a>
+  <a href='?action=vaciar_cesta' id='vaciar_cesta' class='button'>Vaciar cesta</a>
+  <!--<button type="button" class="button" onclick="alert('Compra realizada')">Aceptar</button>
+    <button type="button" class="button" onclick="alert('Compra cancelada')">Cancelar</button>-->
 </div>
 
   </body>

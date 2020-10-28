@@ -35,5 +35,8 @@ function contarCesta(){
     }
 
 }
+function vaciarCesta(){
+    $_SESSION['cesta'] = '';
+}
 
 ?>
