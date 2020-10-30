@@ -26,8 +26,5 @@
         <img class = "logo" src="img\black2logoAthenaStyle.png" >
 
         <br>
-<!--
-<a href="/portal.php?action=home&nombre=usuario" class="button">Hola</a>
--->
 </body>
 </html>

@@ -2,6 +2,17 @@
 <link href="/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <?php
+/**
+ * * Descripción: Proyecto tienda de ropa
+ * *
+ * * 
+ * *
+ * * @author  Anna Serisuelo Meneu & Nieves Cubedo Hurtado
+ * * @copyright 2020 Cubsuelo
+ * * @license http://www.fsf.org/licensing/licenses/gpl.txt GPL 2 or later
+ * * @version 1
+
+ * */
 session_start();
 
 include(dirname(__FILE__)."/includes/listar.php");
