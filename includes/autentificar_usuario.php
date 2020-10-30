@@ -1,7 +1,8 @@
 <?php
 
-function autentificar_usuario()
-{
+function autentificar_usuario(){
+    //busca en la tabla de usuario si hay un usuario con esos datos
+    //si hay una coincidencia inicia la sesion
     global $pdo;
 
     /*
@@ -31,13 +32,11 @@ function autentificar_usuario()
         foreach ($row as $key => $val) {
             $cadena.= $val."#";
         }
-   
     }
     
     $atributos = explode( '#', $cadena );
     $aux = array_pop($atributos);
 
-    
     if(strcmp($usuario, $atributos[0])==0 && strcmp($contrasenya,$atributos[1])==0){
         print "Bienvenido";
         $_SESSION['username']=$usuario;
@@ -48,5 +47,4 @@ function autentificar_usuario()
     print "No se ha podido encontrar el usuario";
 
 }
-
 ?>

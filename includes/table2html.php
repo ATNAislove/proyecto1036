@@ -1,6 +1,7 @@
 <?php
 
 function table2html($table){
+    //devuelve un array con las filas de la tabla que le pases como argumento
     global $pdo;
 
     $query = "SELECT * FROM  $table;";
@@ -26,6 +27,6 @@ function table2html($table){
         print "<h1> No hay resultados </h1>"; 
     */
         return $rows;
-}
+    }
 }
 ?>

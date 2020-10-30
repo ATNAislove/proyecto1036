@@ -1,4 +1,4 @@
-<!-- tabla con codigo, nombre, cantidad, precio unitario y total y precio total del pedido-->
+<!-- tabla con codigo, nombre,  precio y boton para borrar-->
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,6 +7,7 @@
   </head>
   <body>
   <?php 
+  //si la cesta está vacía, te informa
     if(contarCesta()==0){
       echo'<div class="alert">
         <span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span> 
@@ -23,16 +24,17 @@
           <th>Borrar</th>
 
       </tr>
-      <!-- Encontrar la forma de coger los datos de la URL de add -->
       <?php
 
       include_once(dirname(__FILE__)."/../includes/metodos_cesta.php");
+      //si existe una cesta recoje los datos, si no existe es un array vacío
       if(isset($_SESSION["cesta"])){
         $tareas = explode('#', $_SESSION["cesta"]);
       }else{
         $tareas = Array();
       }
-
+      //para cada elemento de la cesta muestra una linea en la tabla
+      //hace una consulta para mostrar todos los datos de cada producto
       foreach($tareas as $k => $tarea){
         if (0 < strlen($tarea)){
           $link = '?action=borrar&pos=' . $k;
@@ -53,7 +55,6 @@
 
           echo "<td>";   
 
-
           echo "    <a href="; echo $link; echo"  id='borrar' class='button' ><svg width='1em' height='1em' viewBox='0 0 16 16' class='bi bi-trash-fill' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
           <path fill-rule='evenodd' d='M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z'/>
         </svg> </a>
@@ -64,20 +65,13 @@
 
         }
        }
-
-       /*if(contarCesta() == 0){
-        
-         echo "<h2> La cesta está vacía </h2>";
-       }*/
       ?>
   </table>
   <div class="botones">
-  
+  <!-- Si se pulsa aceptar procesa la compra
+      si se pulsa vaciar cesta borra los elementos de la cesta-->
   <a href='?action=realizar_compra' id='aceptar' class='button'>Aceptar</a>
   <a href='?action=vaciar_cesta' id='vaciar_cesta' class='button'>Vaciar cesta</a>
-  <!--<button type="button" class="button" onclick="alert('Compra realizada')">Aceptar</button>
-    <button type="button" class="button" onclick="alert('Compra cancelada')">Cancelar</button>-->
 </div>
-
   </body>
 </html>

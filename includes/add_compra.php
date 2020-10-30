@@ -1,6 +1,6 @@
 <?php
-function add_compra()
-{
+function add_compra(){
+    //añade los productos de la cesta a la tabla compra
     global $pdo;
     $table = "compra";
     
@@ -9,12 +9,15 @@ function add_compra()
                        
     //echo $query;
     try { 
+        //si no existe cesta da error
         if(!isset($_SESSION["cesta"])){
             $data["error"] = "No existe cesta";
             return 0;
         }
+
         $vec = explode('#', $_SESSION["cesta"]);
-    
+
+        //si la cesta está vacía da error
         if($vec[0] == ""){
             $data["error"] = "La cesta esta vacia";
             return 0;
@@ -35,9 +38,7 @@ function add_compra()
                 <strong>Éxito!</strong> Compra procesada correctamente.
               </div>';//echo "<h1> Compra procesada! </h1>";
             }
-        }
-        
-    
+        }    
     } catch (PDOExeption $e) {
         echo ($e->getMessage());
     }

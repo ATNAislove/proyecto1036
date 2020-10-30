@@ -18,8 +18,8 @@ include_once(dirname(__FILE__)."/../../includes/table2html.php");
  $table = "producto";
  #Ejecuta la sentencia
  $rows=table2html($table);
-echo "<br>";
-foreach($rows as $row){
+ echo "<br>";
+ foreach($rows as $row){
 
     if(isset($row['img'])){
         $link = $row['img'];
@@ -52,6 +52,6 @@ foreach($rows as $row){
 
     <br>
 
-        <?php } ?>
+ <?php } ?>
     </body>
 </html>

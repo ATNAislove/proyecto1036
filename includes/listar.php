@@ -1,6 +1,7 @@
 <?php
 
 function listar($table){
+    //imprime los elementos de la tabla que le pases como argumento
     global $pdo;
 
     $query = "SELECT * FROM  $table;";
