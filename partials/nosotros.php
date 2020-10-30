@@ -5,6 +5,7 @@
     </head>
     <body>
         <h1>¿Quienes somos?</h1>
+        <br>
         <p>Somos una tienda de comercio online de venta de ropa al por menor.</p>
         
         <p> Athena Style nace con un objetivo, hacer una página lo mejor posible en dos semanas. Para 
@@ -15,7 +16,7 @@
         Style, el estilo de Atenea. Y como diosa de la sabiduría y estrategia de combate teníamos que seguir 
         su estilo. 
         Athena Style apuesta por la moda ética y sostenible. </p>
-
+        <br><br>
         <img class = "logo" src="img\black2logoAthenaStyle.png" >
 
         <br>
