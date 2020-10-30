@@ -3,7 +3,7 @@
 </head>
 <?php
 /**
- * * Descripción: Proyecto tienda de ropa
+ * * Descripción: Proyecto tienda de ropa "Athena Style"
  * *
  * * 
  * *
