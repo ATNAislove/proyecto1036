@@ -17,51 +17,59 @@ include(dirname(__FILE__)."/partials/header.php");
 include(dirname(__FILE__)."/partials/menu.php");
 include(dirname(__FILE__)."/includes/conector_BD.php");
 
-//$_SESSION['cesta'] ='';
 include(dirname(__FILE__)."/includes/table2html.php");
 
+//Si no se ha seleccionado una opcion va a la página principal, 
+//si se ha seleccionado, lleva a la opción seleccionada
 if (isset($_REQUEST['action'])) $action = $_REQUEST["action"];
 else $action = "home";
 $table="producto";
 switch ($action) {
 
     case "home":
+        //página principal
         $central = "/partials/paginaPrincipal.php";
         break;
 
     case "registro":
-        $central = "/partials/registro.php";
+        //formulario de registro
+        $central = "/partials/form_registrar_usuario.php";
         break;
 
     case "registrar":
+        //Registrar nuevo usuario con esos datos
         $table = "usuario";
         registrar($table);
         header("location:?action=home");
         break;
-
+    case "entrar":
+        //formulario inicio sesion
+        $central = "/partials/form_inicio_sesion.php";
+        break;
     case "inicio_sesion":
+        //iniciar sesion de un usuario con sus propiedades segun su tipo
         autentificar_usuario();
         header("location:?action=home");
         break;
 
-    case "entrar":
-        $central = "/partials/inicio_sesion.php";
+    case "nosotros":
+        //información sobre la tienda
+        $central = "/partials/nosotros.php";
         break;
 
-    case "nosotros":
-        $central = "/partials/nosotros.php";
-    break;
-
     case "productos":
+        //productos disponibles para su compra
         $central = "/partials/productos/productos.php";
     break;
 
     case "listar_pedidos":
+        //lista con todos los pedidos realizados por los clientes
         $tabla = "compra";
         listar($tabla);
         break;
 
     case "cesta":
+        //cesta de la compra del cliente registrado
         $central = "/partials/cestaCompra.php";
         break;
 
@@ -75,35 +83,41 @@ switch ($action) {
             addCesta();
             header("location:?action=productos");
         }else{
+            //si el usuario no está identificado debe iniciar sesion o registrarse
             echo'<div class="alert">
             <span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span> 
             <strong>Aviso!</strong> Para añadir a la cesta debes iniciar sesion.
           </div>';
-            $central = "/partials/inicio_sesion.php";
+            $central = "/partials/form_inicio_sesion.php";
         }
         break;
     case "borrar":
+        //borra un elemento de la cesta
         borrarDeLaCesta();
         header("location:?action=cesta");
         break;
-        //tabla compras
     case "realizar_compra":
+        //añade los elementos de la cesta a la tabla compra, vaciando la cesta
         add_compra();
         vaciarCesta();
         $central = "/partials/cestaCompra.php";
         break;
     case "vaciar_cesta":
+        //vacia la cesta
         vaciarCesta();
         header("location:?action=cesta");
         break;
     case "registrar_producto":
-        $central = "/partials/registrar_producto.php";
+        //formulario para añadir un nuevo producto a la tienda
+        $central = "/partials/form_registrar_producto.php";
         break;
     case "nuevo_producto":
+        //añade un nuevo producto a la tienda
         nuevo_producto();
-        $central = "/partials/registrar_producto.php";
+        $central = "/partials/form_registrar_producto.php";
         break;
     case "salir":
+        //el usuario se desconecta, cierra la sesion
         session_destroy();
         session_start();
         header("location:?action=home");
