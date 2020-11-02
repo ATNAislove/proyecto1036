@@ -78,6 +78,10 @@ form{
     box-sizing: border-box;
   }
 
+  input[type=file]{
+    
+  }
+
   /* Galeria */
 
   html, body {
