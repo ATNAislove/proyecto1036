@@ -12,7 +12,7 @@ function nuevo_producto(){
                        
     //echo $query;
     try { 
-        $a=array($_REQUEST['nombre_product'],intval($_REQUEST['precio']), $_REQUEST['descripcion'],$_REQUEST['img']);
+        $a=array($_REQUEST['nombre_product'],intval($_REQUEST['precio']), $_REQUEST['descripcion'],$_REQUEST['url']);
         //print_r ($a);
         $consult = $pdo->prepare($query);
         $a=$consult->execute($a);
