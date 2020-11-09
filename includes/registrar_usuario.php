@@ -24,7 +24,7 @@ function registrar($table){
         $_SESSION['username']=$_REQUEST['username'];
         $_SESSION["tipo"] = "normal";
     
-    } catch (PDOExeption $e) {
+    } catch (PDOException $e) {
         echo ($e->getMessage());
     }
 }

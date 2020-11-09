@@ -25,7 +25,7 @@ function nuevo_producto(){
         <strong>Éxito!</strong> Producto añadido correctamente.
         </div>';//echo "<h1> Producto añadido correctamente! </h1>";
     
-    } catch (PDOExeption $e) {
+    } catch (PDOException $e) {
         echo ($e->getMessage());
     }
 }
