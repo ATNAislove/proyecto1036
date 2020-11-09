@@ -22,6 +22,7 @@ include(dirname(__FILE__)."/includes/add_compra.php");
 include(dirname(__FILE__)."/includes/metodos_cesta.php");
 include(dirname(__FILE__)."/includes/ejecutarSQL.php");
 include(dirname(__FILE__)."/includes/autentificar_usuario.php");
+include(dirname(__FILE__)."/includes/metodos.php");
 
 $central = "";
 include(dirname(__FILE__)."/partials/header.php");

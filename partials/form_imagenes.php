@@ -8,8 +8,10 @@
       </head>
 
 <body>
+
      <p>This is the main content. To display a lightbox click <a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">here</a>
      </p>
+     
      <div id="light" class="white_content">
      <button type="button" class="exit" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">x</button>
      <form action="?action=upload" method="post" enctype="multipart/form-data">

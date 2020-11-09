@@ -15,16 +15,32 @@
         <input type="text" id="descripcion" name="descripcion" value="camiseta simple"><br><br>
         <label for="img">Imagen:</label><br><br>
         <input type="text" id="url" name="url" value="/img/bosque.jpg">
-        <a href="/../partials/form_imagenes.php" class="button">Seleccionar imagen</a>
+        <a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'" class="button">Seleccionar imagen</a>
         
         <br><br>
-
-        <!--<input type="file" id="img" accept="img/*" name="img" id="upload">
-		<input type="submit" value="SUBIR" name="submit">
-        -->
         <input type="submit" class="button" value="Enviar">
         </form> 
 
+<!-- Intento de imagenes -->
+     
+     <div id="light" class="white_content">
+     <button type="button" class="exit" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">x</button>
+     <form action="?action=upload" method="post" enctype="multipart/form-data">
+        <br> 
+        <h1> Seleccionar imágenes </h1> <br> 
+        <br> 
+        
+        <input type="file" accept="image/*" name="tmp_file" id="upload" onchange="handleFiles(event)">
+
+        <canvas id="canvas" width="300" height="300"></canvas>
+        
+        <br><br>
+        <input type="submit" class="button" value="Subir" name="submit">
+        
+        </div>
+        <div id="fade" class="black_overlay"></div>
+    </form> 
+    <script src="/imports/funciones.js"></script>
 
     </body>
 </html>
