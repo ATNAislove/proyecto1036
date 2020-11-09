@@ -77,9 +77,24 @@ form{
     border-radius: 4px;
     box-sizing: border-box;
   }
-
+/*
   input[type=file]{
     
+  }
+  */
+  .exit{
+    float: right;
+    background-color: tomato;
+    font: 100% arial;
+    color: white;
+    border-radius: 4px;
+    border: 1px solid white;
+  }
+
+  .exit:hover {
+    background-color: white; /* Green */
+    color: black;
+    border: 2px solid tomato;
   }
 
   /* Galeria */
@@ -265,7 +280,6 @@ form{
   text-align: center;
 }
 /*Botones*/
-
 .button {
   background-color: #008080; /* Teal */
   color: white;
@@ -276,8 +290,9 @@ form{
   padding: 12px 28px;
   border-radius: 4px;
   border: 1px solid white;
-
+  font: 100% arial;
 }
+
 #botones{
   margin-left: auto;
   margin-right: auto;
@@ -320,6 +335,7 @@ div.desc {
   text-align: center;
   font: 100% arial;
   background-color: white;
+
 
 }
 
@@ -415,4 +431,32 @@ div.desc {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+/* Prueba */
+.black_overlay {
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  -moz-opacity: 0.8;
+  opacity: .80;
+  filter: alpha(opacity=80);
+}
+.white_content {
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  padding: 16px;
+  border: 16px solid orange;
+  background-color: white;
+  z-index: 1002;
+  overflow: auto;
 }
