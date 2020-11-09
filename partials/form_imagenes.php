@@ -17,16 +17,16 @@
      <h1> Seleccionar imágenes </h1> <br> 
      <br> 
      
-     <input type="file" accept="image/*" name="tmp_file" id="upload">
+     <input type="file" accept="image/*" name="tmp_file" id="upload" onchange="handleFiles(event)">
 
-     <canvas id="myCanvas" width="200" height="100"></canvas>
+     <canvas id="canvas" width="300" height="300"></canvas>
      
      <br><br>
      <input type="submit" class="button" value="Subir" name="submit">
     
     </div>
      <div id="fade" class="black_overlay"></div>
-</body>
+    <script src="/imports/funciones.js"></script>
 
 </body>
 </html>
