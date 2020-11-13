@@ -1,6 +1,7 @@
 <?php
 function recoger_imagen(){
-    $link = $_REQUEST('upload');
+    echo 'Hola';
+    var_dump ($_FILES["tmp_file"]["uploadImg"]);
 }
 
 ?>
