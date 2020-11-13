@@ -22,3 +22,6 @@ function validarFormularioAutentificar(){
         return false;
     }
 }
+
+
+//console.log('hola') para depurar por consola, por defecto no es null sino undefined
