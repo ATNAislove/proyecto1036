@@ -36,15 +36,39 @@ function autentificar_usuario(){
     
     $atributos = explode( '#', $cadena );
     $aux = array_pop($atributos);
+    if($usuario == null || $usuario == ''){
+        $data["error"] = "No has introducido usuario";
+        print "No has introducido usuario";
+        return;
+    }
 
-    if(strcmp($usuario, $atributos[0])==0 && strcmp($contrasenya,$atributos[1])==0){
+    else if($contrasenya == null || $contrasenya == ''){
+        $data["error"] = "No has introducido contraseña";
+        print "No has introducido contraseña";
+        return;
+    }
+    
+    else if(count($atributos) == 0){
+        print "El usuario no está";
+        return;
+    }
+
+
+    else if(strcmp($usuario, $atributos[0])==0 && strcmp($contrasenya,$atributos[1])==0){
         print "Bienvenido";
         $_SESSION['username']=$usuario;
         $_SESSION['tipo']=$atributos[2];
         return;
     }
 
-    print "No se ha podido encontrar el usuario";
+
+    
+    
+
+    //Comprobar que el usuario no existe
+    print "El usuario no está";
+
+
 
 }
 ?>

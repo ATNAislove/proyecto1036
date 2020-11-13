@@ -7,3 +7,18 @@ function	handleFiles(e)	{
         ctx.drawImage(img, 10,20,300,200);
     }
 }
+
+//Funciones de validación
+
+//Función de validación: Inicio Sesión
+function validarFormularioAutentificar(){
+    nombreUsuario = document.getElementById("username").value;
+    console.log(nombreUsuario);
+    contasenya = document.getElementById("passwd").value;
+    if(nombreUsuario == null || nombreUsuario.length == 0 || /^\s+$/.test(nombreUsuario)){
+        return false;
+    }
+    else if(contasenya == null || contasenya.length == 0 || /^\s+$/.test(contasenya)){
+        return false;
+    }
+}
