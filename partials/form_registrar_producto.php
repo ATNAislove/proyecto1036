@@ -14,7 +14,15 @@
         <label for="descripcion">Descripcion:</label><br><br>
         <input type="text" id="descripcion" name="descripcion" value="camiseta simple"><br><br>
         <label for="img">Imagen:</label><br><br>
-        <input type="text" id="url" name="url" value="/img/bosque.jpg">
+
+        <?php  
+        
+        if(isset($_POST['submit'])){
+                    echo "<input type='text' id='url' name='url' value="; echo"/img/"; echo $_FILES['tmp_file']['name'];echo">";
+                }else{
+                    echo "<input type='text' id='url' name='url' value='/img/bosque.jpg'>";
+                }     ?>
+        
         <a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'" class="button">Seleccionar imagen</a>
         
         <br><br>
@@ -30,7 +38,7 @@
         <h1> Seleccionar imágenes </h1> <br> 
         <br> 
         
-        <input type="file" accept="image/*" name="tmp_file" id="uploadImg" onchange="handleFiles(event)">
+        <input type="file" accept="img/*" name="tmp_file" id="tmp_file" onchange="handleFiles(event)">
         <canvas id="canvas" width="300" height="300"></canvas>
         
         <br><br>

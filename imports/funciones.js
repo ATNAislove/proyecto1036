@@ -6,4 +6,4 @@ function	handleFiles(e)	{
     img.onload	=	function()	{
         ctx.drawImage(img, 10,20,300,200);
     }
-}
+}//console.log('hola') para depurar por consola, por defecto no es null sino undefined

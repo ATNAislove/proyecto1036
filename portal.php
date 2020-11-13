@@ -130,6 +130,7 @@ switch ($action) {
         break;
     case "upload":
         recoger_imagen();
+        $central = "/partials/form_registrar_producto.php";
         break;
     case "salir":
         //el usuario se desconecta, cierra la sesion
