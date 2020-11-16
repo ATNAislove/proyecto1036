@@ -36,6 +36,7 @@ function anyadir(producto){
     nodo2.onclick = eliminarNodo.bind(nodo2);
     //borra igual sin el bind
     document.getElementById('compra').appendChild(nodo);
+    //hay que añadir en localStorage
   }
   //Funcion borrar producto de la cesta
   function eliminarNodo(){
