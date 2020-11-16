@@ -15,6 +15,6 @@
         </form> 
         <h2>¿Aún no estas registrado? <a href="?action=registro">Regístrate</a></h2>
 
-
+<script src="/imports/funciones.js"></script>
     </body>
 </html>

@@ -12,15 +12,23 @@ function	handleFiles(e)	{
 
 //Función de validación: Inicio Sesión
 function validarFormularioAutentificar(){
-    nombreUsuario = document.getElementById("username").value;
-    console.log(nombreUsuario);
-    contasenya = document.getElementById("passwd").value;
-    if(nombreUsuario == null || nombreUsuario.length == 0 || /^\s+$/.test(nombreUsuario)){
-        return false;
-    }
-    else if(contasenya == null || contasenya.length == 0 || /^\s+$/.test(contasenya)){
-        return false;
-    }
+  nombreUsuario = document.getElementById("username").value;
+  contasenya = document.getElementById("passwd").value;
+  
+//document.fvalida.nombre.value.length==0
+
+  if (nombreUsuario == null || nombreUsuario.length == 0 || /^\s+$/.test(nombreUsuario)){
+      alert("Tiene que escribir su nombre");
+      return false;
+  }    
+
+  else if(contasenya == null || contasenya.length == 0 || /^\s+$/.test(contasenya)){
+      alert("Tiene que escribir una contraseña");
+      return false;
+  }else if(nombreUsuario != null){
+      alert("El usuario no existe");
+      return false;
+  }
 }
 //Función añadir elementos a la cesta
 function anyadir(producto){
