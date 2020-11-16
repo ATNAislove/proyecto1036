@@ -62,6 +62,7 @@ switch ($action) {
         //iniciar sesion de un usuario con sus propiedades segun su tipo
         autentificar_usuario();
         header("location:?action=home");
+        //if donde si hay error devuelva el la pagina de entrar y si no, la principal
         break;
 
     case "nosotros":
