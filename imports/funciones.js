@@ -30,41 +30,18 @@ function validarFormularioAutentificar(){
       return false;
   }
 }
+
 //Función añadir elementos a la cesta
 function anyadir(producto){
-    let nodo = document.createElement('tr');
-    if(producto)
-      nodo.textContent = producto;
-    else /*si el contenido es vacio return */
-       nodo.textContent = document.getElementById('producto').value;
-    
-    let nodo2 = document.createElement('button');
-    nodo2.textContent = 'Borrar';
-    nodo.appendChild(nodo2);
-    nodo2.onclick = eliminarNodo.bind(nodo2);
-    //borra igual sin el bind
-    document.getElementById('compra').appendChild(nodo);
-    //hay que añadir en localStorage
-  }
-  //Funcion borrar producto de la cesta
-  function eliminarNodo(){
-    this.parentNode.remove();
-    //hay que borrar de localStorage
-  }
-  //Funcion guardar elementos de la cesta
-  function guardar(){
-    let tabla = document.querySelectorAll('tr');
-    //hay que conseguir que no guarde el contenido del boton
-    tabla = Array.from(tabla).map(n => n.textContent);
-    localStorage.setItem('cesta',JSON.stringify(tabla));
-  }
-  //Muestra los elementos que hay en la cesta
-  (function(){
-    let tabla = JSON.parse(localStorage.getItem('cesta'));
-    if(tabla && tabla.length>0){
-        tabla.forEach(producto => anyadir(producto))
-    }
-  })()
+  let lista = JSON.parse(localStorage.getItem('cesta'));
+  if(producto=="") return;
+  if(lista==null)
+    lista = new Array(producto.toString());
+  else
+      lista.push(producto.toString());
+  //actualizamos localStorage
+  localStorage.setItem('cesta',JSON.stringify(lista));
+}
 
 
 //console.log('hola') para depurar por consola, por defecto no es null sino undefined

@@ -1,4 +1,4 @@
-  ul {
+  ul.navli {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -6,12 +6,12 @@
     background-color: #333;
   }
   
-  li {
+  li.navli {
     float: left;
     
   }
   
-  li a, .dropbtn {
+  li a.navli, .dropbtn {
     display: inline-block;
     color: white;
     text-align: center;

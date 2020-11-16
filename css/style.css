@@ -190,7 +190,7 @@ form{
     z-index: 10;
 }
 
-.carousel-indicators li {
+.carousel-indicators {
     display: inline-block;
     margin: 0 5px;
 }

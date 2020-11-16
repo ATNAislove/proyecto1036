@@ -16,9 +16,20 @@
     }
   ?>
   <div id="caja" class="caja_flotante">
-  
-    <h1 style="color:white"> Cesta de la compra </h1>
-    <table id = "compra">
+    <form action="?action=comprar" method="GET">
+
+      <h1 style="color:white"> Cesta de la compra </h1>
+      <ul id="compra">
+      </ul>
+
+
+
+
+      <input type="submit" class="button" value="comprar" name="submit"></input>
+    </form>
+
+    <!--Propuesta cesta anterior sin javascript
+      <table id = "compra">
         <tr>
             <th>Código de producto</th>
             <th>Nombre</th>
@@ -26,7 +37,7 @@
             <th>Borrar</th>
 
         </tr>
-        <?php
+        <?php /*
 
         include_once(dirname(__FILE__)."/../includes/metodos_cesta.php");
         //si existe una cesta recoje los datos, si no existe es un array vacío
@@ -66,9 +77,10 @@
 
 
           }
-        }
+        }*/
         ?>
-    </table>
+        
+    </table>-->
   </div>
   <div class="botones">
   <!-- Si se pulsa aceptar procesa la compra
@@ -76,5 +88,6 @@
   <a href='?action=realizar_compra' id='aceptar' class='button'>Aceptar</a>
   <a href='?action=vaciar_cesta' id='vaciar_cesta' class='button'>Vaciar cesta</a>
 </div>
+<script src="/imports/funcionesCesta.js"></script>
   </body>
 </html>
