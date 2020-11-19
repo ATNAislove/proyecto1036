@@ -21,11 +21,8 @@
       <h1 style="color:white"> Cesta de la compra </h1>
       <ul id="compra">
       </ul>
-
-
-
-
-      <input type="submit" class="button" value="comprar" name="submit"></input>
+      <input id="items" hidden name="productes" value=""></input>
+      <input type="submit" class="button" ></input>
     </form>
 
     <!--Propuesta cesta anterior sin javascript

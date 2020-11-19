@@ -109,7 +109,7 @@ switch ($action) {
         borrarDeLaCesta();
         header("location:?action=cesta");
         break;
-    case "realizar_compra":
+    case "comprar":
         //añade los elementos de la cesta a la tabla compra, vaciando la cesta
         add_compra();
         vaciarCesta();

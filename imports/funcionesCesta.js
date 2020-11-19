@@ -11,14 +11,21 @@ function eliminarNodo(){
     //actualizamos localStorage
     localStorage.setItem('cesta',JSON.stringify(lista));
     }
-  this.parentNode.remove();
-  //hay que borrar de localStorage
+    this.parentNode.remove();
+    //actualizamos el value del input items
+    let productes = document.getElementById("items");
+    productes.value = productos();
 }
 function productos(){
-    let lista = JSON.parse(localStorage.getItem('cesta'));
-    return lista.toString();
+  let lista = JSON.parse(localStorage.getItem('cesta'));
+  let cadena = "";
+  if(lista && lista.length>0){
+    cadena=lista[0].toString();
+    for (let i=1; i<lista.length;i++){
+      cadena = cadena.concat("-" + lista[i]);
+    }
+  }return cadena;
 }
-
 function mostrar(producto){
   let nodo = document.createElement('li');
   if(producto!="")
@@ -36,9 +43,11 @@ function mostrar(producto){
 }
 //Muestra los elementos que hay en la cesta
 (function(){
-    
   let lista = JSON.parse(localStorage.getItem('cesta'));
   if(lista && lista.length>0){
-      lista.forEach(producto => mostrar(producto))
+      lista.forEach(producto => mostrar(producto));
+      //anyadir los productos al valor del input items
+      let productes = document.getElementById("items");
+      productes.value = productos();
   }
 })()
