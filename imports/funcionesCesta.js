@@ -36,6 +36,7 @@ function mostrar(producto){
   
   let nodo2 = document.createElement('button');
   nodo2.textContent = 'Borrar';
+  nodo2.className = 'button';
   nodo.appendChild(nodo2);
   nodo2.onclick = eliminarNodo.bind(nodo2);
   //borra igual sin el bind

@@ -1,6 +1,6 @@
 <?php
 
-function addCesta() {
+/*function addCesta() {
     //añade un producto a la cesta
     if(!isset($_GET['product'])){
         print('No se ha podido añadir');
@@ -40,7 +40,7 @@ function contarCesta(){
         return count($vec);
     }
 }
-/*function vaciarCesta(){
+function vaciarCesta(){
     //vacia la cesta
     $_SESSION['cesta'] = '';
 }*/
