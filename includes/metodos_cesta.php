@@ -26,7 +26,7 @@ function borrarDeLaCesta(){
     array_splice($vec, intval($pos), 1);
     $_SESSION['cesta'] = implode('#', $vec);
 }
-
+*/
 function contarCesta(){
     //cuenta los elementos que tiene la cesta
     if(!isset($_SESSION["cesta"])){
@@ -40,7 +40,7 @@ function contarCesta(){
         return count($vec);
     }
 }
-function vaciarCesta(){
+/*function vaciarCesta(){
     //vacia la cesta
     $_SESSION['cesta'] = '';
 }*/
