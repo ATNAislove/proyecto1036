@@ -21,7 +21,7 @@
       <h1 style="color:white"> Cesta de la compra </h1>
       <ul id="compra">
       </ul>
-      <input type="submit" name ="action" value="comprar" class="button" onclick="vaciarCesta()"></input>
+      <input type="submit" name ="action" value="Comprar" class="button" onclick="vaciarCesta()"></input>
       <input id="items" hidden name="productes" value=""></input>
       <input type="button" value="Vaciar Cesta" class="button" onclick="vaciarCesta()">
       

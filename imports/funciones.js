@@ -69,6 +69,9 @@ function anyadir(producto){
   //actualizamos localStorage
   localStorage.setItem('cesta',JSON.stringify(lista));
 }
+function borrarCesta(){
+  localStorage.removeItem('cesta');
+}
 
 //console.log('hola') para depurar por consola, por defecto no es null sino undefined
 
@@ -90,7 +93,7 @@ function guardarDatosForm(){
 
 }
 
-//Funcion para recuperar los datos
+
 /*function recuperarDatosForm(){
   if(window.location.href.includes('upload')){ //Estamos en la página correcta
     document.getElementById('nombre_product').value = localStorage.getItem('nombre_product');
@@ -101,6 +104,7 @@ function guardarDatosForm(){
   }
   console.log(document.getElementById('nombre_product').value);
 }*/
+//Funcion para recuperar los datos
 (function(){
   if(window.location.href.includes('upload')){ //Estamos en la página correcta
     document.getElementById('nombre_product').value = localStorage.getItem('nombre_product');
