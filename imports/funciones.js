@@ -71,3 +71,34 @@ function anyadir(producto){
 }
 
 //console.log('hola') para depurar por consola, por defecto no es null sino undefined
+
+//Función para guardar los datos
+function guardarDatosForm(){
+  //Habrá que guardar en localStorege el nombre, precio y descripcion
+  let nombre_product = document.getElementById('nombre_product').value;
+  if(nombre_product != null)
+    localStorage.setItem('nombre_product', nombre_product);
+
+  console.log(nombre_product);
+  let precio = document.getElementById('precio').value;
+  if(precio != null)
+    localStorage.setItem('precio', precio);
+
+  let descripcion = document.getElementById('descripcion').value;
+  if(descripcion != null)
+    localStorage.setItem('descripcion', descripcion);
+
+}
+
+//Funcion para recuperar los datos
+function recuperarDatosForm(){
+  if(window.location.href.includes('upload')){ //Estamos en la página correcta
+    document.getElementById('nombre_product').value = localStorage.getItem('nombre_product');
+    document.getElementById('precio').value = localStorage.getItem('precio');
+    document.getElementById('descripcion').value = localStorage.getItem('descripcion');
+    document.getElementById('url').value = document.getElementById('url').value;
+
+    console.log(document.getElementById('descripcion').value);
+  }
+  console.log(document.getElementById('nombre_product').value);
+}
