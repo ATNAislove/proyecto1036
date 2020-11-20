@@ -40,9 +40,9 @@ function contarCesta(){
         return count($vec);
     }
 }
-function vaciarCesta(){
+/*function vaciarCesta(){
     //vacia la cesta
     $_SESSION['cesta'] = '';
-}
+}*/
 
 ?>

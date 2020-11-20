@@ -10,13 +10,17 @@ function add_compra(){
     //echo $query;
     try { 
         //si no existe cesta da error
-        if(!isset($_SESSION["cesta"])){
+        if(!isset($_GET['productes'])){
             $data["error"] = "No existe cesta";
             return 0;
         }
 
-        $vec = explode('#', $_SESSION["cesta"]);
+        $vec = explode('-', $_GET['productes']);
 
+        if(sizeof($vec)==0){
+            $data["error"] = "La cesta esta vacia";
+            return 0;
+        }
         //si la cesta está vacía da error
         if($vec[0] == ""){
             $data["error"] = "La cesta esta vacia";

@@ -41,6 +41,11 @@ function mostrar(producto){
   //borra igual sin el bind
   document.getElementById('compra').appendChild(nodo);    
 }
+//borra los elementos guardados en la cesta de localStorage
+function vaciarCesta(){
+  let lista=[];
+  localStorage.setItem('cesta',JSON.stringify(lista));
+}
 //Muestra los elementos que hay en la cesta
 (function(){
   let lista = JSON.parse(localStorage.getItem('cesta'));

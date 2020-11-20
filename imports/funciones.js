@@ -70,5 +70,4 @@ function anyadir(producto){
   localStorage.setItem('cesta',JSON.stringify(lista));
 }
 
-
 //console.log('hola') para depurar por consola, por defecto no es null sino undefined

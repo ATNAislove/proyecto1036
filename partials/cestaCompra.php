@@ -21,8 +21,10 @@
       <h1 style="color:white"> Cesta de la compra </h1>
       <ul id="compra">
       </ul>
+      <input type="submit" name ="action" value="comprar" class="button" onclick="vaciarCesta()"></input>
       <input id="items" hidden name="productes" value=""></input>
-      <input type="submit" class="button" ></input>
+      <input type="button" value="Vaciar Cesta" class="button" onclick="vaciarCesta()">
+      
     </form>
 
     <!--Propuesta cesta anterior sin javascript
@@ -79,12 +81,12 @@
         
     </table>-->
   </div>
-  <div class="botones">
-  <!-- Si se pulsa aceptar procesa la compra
-      si se pulsa vaciar cesta borra los elementos de la cesta-->
+  <!--<div class="botones">
+   Si se pulsa aceptar procesa la compra
+      si se pulsa vaciar cesta borra los elementos de la cesta
   <a href='?action=realizar_compra' id='aceptar' class='button'>Aceptar</a>
   <a href='?action=vaciar_cesta' id='vaciar_cesta' class='button'>Vaciar cesta</a>
-</div>
+</div>-->
 <script src="/imports/funcionesCesta.js"></script>
   </body>
 </html>

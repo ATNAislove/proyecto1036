@@ -104,22 +104,24 @@ switch ($action) {
             $central = "/partials/form_inicio_sesion.php";
         }
         break;
-    case "borrar":
+    /*case "borrar":
         //borra un elemento de la cesta
         borrarDeLaCesta();
         header("location:?action=cesta");
         break;
+    */
     case "comprar":
         //añade los elementos de la cesta a la tabla compra, vaciando la cesta
         add_compra();
-        vaciarCesta();
+        //vaciarCesta();
         $central = "/partials/cestaCompra.php";
         break;
-    case "vaciar_cesta":
+    /*case "vaciar_cesta":
         //vacia la cesta
         vaciarCesta();
         header("location:?action=cesta");
         break;
+    */
     case "registrar_producto":
         //formulario para añadir un nuevo producto a la tienda
         $central = "/partials/form_registrar_producto.php";
