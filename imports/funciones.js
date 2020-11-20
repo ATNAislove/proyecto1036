@@ -91,14 +91,23 @@ function guardarDatosForm(){
 }
 
 //Funcion para recuperar los datos
-function recuperarDatosForm(){
+/*function recuperarDatosForm(){
   if(window.location.href.includes('upload')){ //Estamos en la página correcta
     document.getElementById('nombre_product').value = localStorage.getItem('nombre_product');
     document.getElementById('precio').value = localStorage.getItem('precio');
     document.getElementById('descripcion').value = localStorage.getItem('descripcion');
-    document.getElementById('url').value = document.getElementById('url').value;
 
     console.log(document.getElementById('descripcion').value);
   }
   console.log(document.getElementById('nombre_product').value);
-}
+}*/
+(function(){
+  if(window.location.href.includes('upload')){ //Estamos en la página correcta
+    document.getElementById('nombre_product').value = localStorage.getItem('nombre_product');
+    document.getElementById('precio').value = localStorage.getItem('precio');
+    document.getElementById('descripcion').value = localStorage.getItem('descripcion');
+
+    console.log(document.getElementById('descripcion').value);
+  }
+  console.log(document.getElementById('nombre_product').value);
+})()
