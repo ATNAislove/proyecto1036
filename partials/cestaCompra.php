@@ -8,22 +8,28 @@
   <body>
   <?php 
   //si la cesta está vacía, te informa
+  /*
     if(contarCesta()==0){
       echo'<div class="alert">
         <span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span> 
         <strong>Aviso!</strong> La cesta está vacía.
       </div>';
     }
+    */
   ?>
+  <h1> Cesta de la compra </h1>
   <div id="caja" class="caja_flotante">
     <form action="?action=comprar" method="GET">
+      <br>
+      <br>
 
-      <h1 style="color:white"> Cesta de la compra </h1>
       <ul id="compra">
       </ul>
+
       <input type="submit" name ="action" value="comprar" class="button" onclick="vaciarCesta()"></input>
       <input id="items" hidden name="productes" value=""></input>
       <input type="button" value="vaciar cesta" class="button" onclick="vaciarCesta()">
+      <br><br>
       
     </form>
 

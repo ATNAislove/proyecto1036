@@ -4,12 +4,20 @@ function eliminarNodo(){
     if(lista && lista.length>0){
         //Borrar un objeto concreto del array:
         for (var i=0; i<lista.length; i++){
-            if (lista[i] == this.parentNode.textContent.slice(0,-6)) {
-            lista.splice(i,1);
+          var elemento = parseInt(lista[i]);
+          var elementoABorrar = parseInt(this.parentNode.textContent.slice(0,-6));
+          console.log(elemento == elementoABorrar);
+          console.log(elemento);
+          console.log(elementoABorrar);
+            if (elemento == elementoABorrar) {
+              lista.splice(i,1);
+              console.log(lista);
+              break;
             }
         }
     //actualizamos localStorage
     localStorage.setItem('cesta',JSON.stringify(lista));
+    console.log(lista);
     }
     this.parentNode.remove();
     //actualizamos el value del input items
@@ -28,12 +36,18 @@ function productos(){
 }
 function mostrar(producto){
   let nodo = document.createElement('li');
-  if(producto!="")
-    nodo.textContent = producto;
-  else /*si el contenido es vacio return */
+  if(producto!=""){
+    nodo.textContent = producto + ' ';
+    document.createElement('br');
+  }else{ /*si el contenido es vacio return */
+    //Crear la alerta indicando que la cesta está vacía
+    let alerta = document.createElement('alert');
+    alerta = alert('La cesta está vacía');
+    alerta.className = 'alert';
+    console.log('Hola');
     return; 
     //nodo.textContent = document.getElementById('producto').value;
-  
+  }
   let nodo2 = document.createElement('button');
   nodo2.textContent = 'Borrar';
   nodo2.className = 'button';
@@ -57,3 +71,17 @@ function vaciarCesta(){
       productes.value = productos();
   }
 })()
+
+//Función que cuente el número de productos
+function contarProductos(){
+  let lista = JSON.parse(localStorage.getItem('cesta'));
+  if(lista && lista.length>0){
+    //Colocar el número de elementos
+    let numero = lista.length;
+    document.createElement('p') = numero;
+    return numero;
+  }
+  //Si no, colocar un 0
+  document.createElement('p') = 0;
+  return 0;
+}

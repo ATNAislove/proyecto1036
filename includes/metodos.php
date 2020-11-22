@@ -21,15 +21,8 @@ function recoger_imagen(){
         echo "Sorry, file already exists.";
         $uploadOk = 0;
     }
-/*
 
-    // Check file size
-    if ($_FILES["tmp_file"]["size"] > 2000000) {
-        echo "Sorry, your file is too large.";
-        $uploadOk = 0;
-    }
-    /*
-
+    
     // Check if $uploadOk is set to 0 by an error
     if ($uploadOk == 0) {
         echo "Sorry, your file was not uploaded.";
@@ -41,6 +34,15 @@ function recoger_imagen(){
         echo "Sorry, there was an error uploading your file.";
         }
     }
+/*
+
+    // Check file size
+    if ($_FILES["tmp_file"]["size"] > 2000000) {
+        echo "Sorry, your file is too large.";
+        $uploadOk = 0;
+    }
+    
+
 */
 }
 

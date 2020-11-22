@@ -110,8 +110,5 @@ function guardarDatosForm(){
     document.getElementById('nombre_product').value = localStorage.getItem('nombre_product');
     document.getElementById('precio').value = localStorage.getItem('precio');
     document.getElementById('descripcion').value = localStorage.getItem('descripcion');
-
-    console.log(document.getElementById('descripcion').value);
   }
-  console.log(document.getElementById('nombre_product').value);
 })()
