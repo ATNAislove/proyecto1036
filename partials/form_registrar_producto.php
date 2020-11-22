@@ -47,8 +47,6 @@
         <input type="submit" class="button" value="Subir" id="botonImg" name="submit" onclick="recuperarDatosForm()">
         
         </div>
-
-        <input type="" class="button" value="Cambiar" onclick="recuperarDatosForm()">
         
         <div id="fade" class="black_overlay"></div>
     </form> 

@@ -10,7 +10,7 @@
         <label for="usuario">Usuario:</label><br><br>
         <input type="text" id="username" name="username" value="John" required><br><br>
         <label for="correo">Correo:</label><br><br>
-        <input type="text" id="email" name="email" value="John@gmail.com" oninput="validarCorreo()" required><br><br>
+        <input type="email" id="email" name="email" value="John@gmail.com" oninput="validarCorreo()" required><br><br>
         <label for="passwd">Contraseña:</label><br><br>
         <input type="password" id="passwd" name="passwd" value="0000" required><br><br>
         <input type="submit" class="button" value="Enviar">
