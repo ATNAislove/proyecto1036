@@ -34,7 +34,7 @@
      
      <div id="light" class="white_content">
      <button type="button" class="exit" onclick="document.getElementById('light').style.display='none';
-     document.getElementById('fade').style.display='none'; recuperarDatosForm()">x</button>
+     document.getElementById('fade').style.display='none';">x</button>
      <form action="?action=upload" method="POST" enctype="multipart/form-data">
         <br> 
         <h1> Seleccionar imágenes </h1> <br> 
@@ -44,7 +44,7 @@
         <canvas id="canvas" width="300" height="300"></canvas>
         
         <br><br>
-        <input type="submit" class="button" value="Subir" id="botonImg" name="submit" onclick="recuperarDatosForm()">
+        <input type="submit" class="button" value="Subir" id="botonImg" name="submit" >
         
         </div>
         
