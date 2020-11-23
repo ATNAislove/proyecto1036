@@ -476,5 +476,14 @@ div.desc {
 
 .caja_flotante ul{
   background-color:powderblue;
-
+}
+.visor {
+  background-color: lightblue;
+  width: 100px;
+  overflow-x: scroll;
+  display:flex;
+}
+.item {
+  margin: 5px;
+  background-color: darkblue;
 }
