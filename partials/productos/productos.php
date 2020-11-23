@@ -11,6 +11,19 @@ include_once(dirname(__FILE__)."/../../includes/table2html.php");
     <body>
 
     <div class="visor">
+        <!-- Hacer un bucle que recorra el resultado de
+            datos.php 
+        
+        <div id="1" class="item">
+        <img src="img/img12.jpg"
+        width="100"
+        height="100">
+        <p>Chaqueta 50€</p>
+        <button>Comprar</button>
+        </div>
+
+        Hay que hacer un fetch a datos
+        -->
         <div id="1" class="item">
         <img src="img/img12.jpg"
         width="100"
