@@ -478,12 +478,13 @@ div.desc {
   background-color:powderblue;
 }
 .visor {
-  background-color: lightblue;
-  width: 100px;
+  margin:0 auto;
+  background-color:#333 ;
   overflow-x: scroll;
   display:flex;
 }
 .item {
   margin: 5px;
-  background-color: darkblue;
+  background-color: teal;
+  align-items: center;
 }
