@@ -12,7 +12,7 @@
         <label for="max">Max:</label>
         <input type="number" id="max" name="max" required><br><br>
        
-        <input type="submit" name="action" class="button" value="filtrar" onclick=precios()>
+        <input type="submit" name="action" class="button" value="filtrar" onclick=preciosFiltrados()>
         
         </form> 
 

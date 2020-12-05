@@ -72,7 +72,7 @@ switch ($action) {
 
     case "productos":
         //productos disponibles para su compra
-        $central = "/partials/productos/productos.php";
+        $central = "/partials/form_precios.php";
     break;
 
     case "listar_pedidos":
@@ -135,17 +135,12 @@ switch ($action) {
         recoger_imagen();
         $central = "/partials/form_registrar_producto.php";
         break;
-
-    case "filtrar":
-        $central = "/partials/form_precios.php";
-        break;
     case "salir":
         //el usuario se desconecta, cierra la sesion
         session_destroy();
         session_start();
         header("location:?action=home");
     break;
-    
     default:
         $data["error"] = "Accion No permitida";
 }

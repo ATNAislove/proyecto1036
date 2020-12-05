@@ -3,7 +3,6 @@
         <li class="navli"><a class="navli" href="./portal.php?action=home"><img src="/img/white3logoAthenaStyle.png" width="60" height="25"/></a></li>
         <li class="navli"><a class="navli" href="?action=nosotros">¿Quines somos?</a></li>
         <li class="navli"><a class="navli" href="?action=productos">Productos</a></li>
-        <li class="navli"><a class="navli" href="?action=filtrar">Filtrar</a></li>
         
 
         <?php 		

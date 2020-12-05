@@ -1,8 +1,8 @@
 function items(element){
     if (element=="" || element==null) return;
-    console.log('aqui llega');
+   /*console.log('aqui llega');
     console.log(element);
-    console.log(element.produc_id);
+    console.log(element.produc_id);*/
     let nodo = document.createElement('div');
     nodo.className = 'item';
     nodo.id=element.produc_id;
@@ -39,6 +39,10 @@ function anyadir(){
   
   //para cada producto diccionario llama a la funcion items
   function auxiliar(json){
+    if(json.length==0 || json == null){
+      alert("No hay productos en ese rango de precios");
+      return;
+    }
     for(let producto of json){
         items(producto);
     }
@@ -50,14 +54,20 @@ function vaciarCarrousel(){
   };
   
 }
-function precios(){
+function preciosFiltrados(){
+  $min = document.getElementById('min').value;
+  $max = document.getElementById('max').value;
   //vaciamos el carrousel si es que hay algo
     vaciarCarrousel();
+    if ($min=="" || $max=="") {
+      todosProductos();
+      return;
+    }
     //cogemos el formulario
     let $formulario = document.querySelector('#formulario');
     //lo transformamos en un formData
     let $formData = new FormData($formulario);
-    console.log($formData.get('min'))
+    //console.log($formData.get('min'))
 
     //evitamos que la pagina se recargue
     $formulario.addEventListener('submit', event =>{
@@ -74,3 +84,17 @@ function precios(){
         }else return response.json();})
     .then(json => auxiliar(json));
 }
+function todosProductos(){
+  fetch('./includes/datos.php')
+  .then(response => {if(!response.ok){
+      console.log('error'); throw response.statusText;
+      }else return response.json();})
+  .then(json => auxiliar(json));
+}
+(function(){
+  fetch('./includes/datos.php')
+  .then(response => {if(!response.ok){
+      console.log('error'); throw response.statusText;
+      }else return response.json();})
+  .then(json => auxiliar(json));
+})()
