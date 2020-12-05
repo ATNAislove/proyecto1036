@@ -51,33 +51,26 @@ function vaciarCarrousel(){
   
 }
 function precios(){
-    $min = document.getElementById('min').value;
-    $max = document.getElementById('max').value;
+  //vaciamos el carrousel si es que hay algo
     vaciarCarrousel();
+    //cogemos el formulario
     let $formulario = document.querySelector('#formulario');
+    //lo transformamos en un formData
     let $formData = new FormData($formulario);
     console.log($formData.get('min'))
 
+    //evitamos que la pagina se recargue
     $formulario.addEventListener('submit', event =>{
       event.preventDefault();
     }) 
-
+    //hacemos un fetch post para que pase los parametros mediante el formData
+    // y recogemos el json con los productos filtrados
     fetch('./includes/precios.php',{
       method : 'POST',
-      
       body : $formData
     })
     .then(response => {if(!response.ok){
         console.log('error'); throw response.statusText;
         }else return response.json();})
-    //.then(json => console.log(json));
     .then(json => auxiliar(json));
-
-  /*
-    fetch('./includes/precios.php')
-    .then(response => {if(!response.ok){
-        console.log('error'); throw response.statusText;
-        }else return response.json();})
-    .then(json => auxiliar(json));
-    */
 }
