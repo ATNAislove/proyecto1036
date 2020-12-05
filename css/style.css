@@ -70,7 +70,7 @@ form{
     background: #555; 
   }
 
-  input[type=text], input[type=password],input[type=number],input[type=url], [type=email]{
+  input[type=text], input[type=password],input[type=number],input[type=url], input[type=email], input[list=prendas]{
     width: 15%;
     padding: 12px 20px;
     margin: 8px 0;
