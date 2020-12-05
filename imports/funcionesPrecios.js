@@ -24,6 +24,18 @@ function items(element){
     let carrousel = document.getElementById('carr');
     carrousel.appendChild(nodo);
 }
+//Función añadir elementos a la cesta
+function anyadir(){
+  let producto = this.parentNode.id;
+  let lista = JSON.parse(localStorage.getItem('cesta'));
+  if(producto=="") return;
+  if(lista==null)
+    lista = new Array(producto.toString());
+  else
+      lista.push(producto.toString());
+  //actualizamos localStorage
+  localStorage.setItem('cesta',JSON.stringify(lista));
+}
   
   //para cada producto diccionario llama a la funcion items
   function auxiliar(json){
@@ -31,12 +43,41 @@ function items(element){
         items(producto);
     }
   }
+function vaciarCarrousel(){
+  let $carr = document.getElementById('carr');
+  while ($carr.firstChild){
+    $carr.removeChild($carr.firstChild);
+  };
+  
+}
+function precios(){
+    $min = document.getElementById('min').value;
+    $max = document.getElementById('max').value;
+    vaciarCarrousel();
+    let $formulario = document.querySelector('#formulario');
+    let $formData = new FormData($formulario);
+    console.log($formData.get('min'))
 
-(function(){
+    $formulario.addEventListener('submit', event =>{
+      event.preventDefault();
+    }) 
+
+    fetch('./includes/precios.php',{
+      method : 'POST',
+      
+      body : $formData
+    })
+    .then(response => {if(!response.ok){
+        console.log('error'); throw response.statusText;
+        }else return response.json();})
+    //.then(json => console.log(json));
+    .then(json => auxiliar(json));
+
+  /*
     fetch('./includes/precios.php')
     .then(response => {if(!response.ok){
         console.log('error'); throw response.statusText;
         }else return response.json();})
     .then(json => auxiliar(json));
-    
-})()
+    */
+}

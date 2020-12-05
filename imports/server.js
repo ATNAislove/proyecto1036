@@ -1,8 +1,4 @@
 function items(element){
-    if (element=="" || element==null) return;
-    console.log('aqui llega');
-    console.log(element);
-    console.log(element.produc_id);
     let nodo = document.createElement('div');
     nodo.className = 'item';
     nodo.id=element.produc_id;
