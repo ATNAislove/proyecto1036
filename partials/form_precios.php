@@ -4,13 +4,15 @@
     <link href="/css/style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <h1>Filtrar precios</h1>
+        <h1>Filtros</h1>
 
         <form id="formulario">
-            
-            <label for="buscador">Busca tu prenda:</label>
+            <h2>Busca tu prenda</h2>
+            <!-- <label for="buscador">Busca tu prenda:</label> -->
             <input list="prendas" name="buscador" id="buscador" onchange=mostrarEnPantalla()>
             <datalist id="prendas"></datalist> <br><br>
+
+            <h2>Filtrar por precios</h2>
             <label for="min">Min:</label>
             <input type="number" id="min" name="min" required>
             <label for="max">Max:</label>
