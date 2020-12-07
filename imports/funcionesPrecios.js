@@ -24,6 +24,11 @@ function items(element){
     let carrousel = document.getElementById('carr');
     carrousel.appendChild(nodo);
 }
+
+
+
+
+
 //Función añadir elementos a la cesta
 function anyadir(){
   let producto = this.parentNode.id;
