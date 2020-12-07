@@ -138,3 +138,35 @@ fetch('./includes/datos.php')
       }else return response.json();})
   .then(json => auxiliar(json));
 })()
+
+
+//Validar precios
+function validarPrecioMax(){
+  // Coger el texto de la tarea
+    let nodo = document.getElementById('max')
+    let precio = nodo.value
+  
+    //Comprobar que sea un número positivo >0
+    if (precio <= 0)
+      /*Cambiar de color a rojo*/
+      //Colorear el border color
+      nodo.style.color = 'red'
+    else
+      /*Cambiar el color a verde*/
+      nodo.style.color = 'green'
+  }
+
+  function validarPrecioMin(){
+    // Coger el texto de la tarea
+      let nodo = document.getElementById('min')
+      let precio = nodo.value
+    
+      //Comprobar que sea un número positivo >0
+      if (precio <= 0)
+        /*Cambiar de color a rojo*/
+        //Colorear el border color
+        nodo.style.color = 'red'
+      else
+        /*Cambiar el color a verde*/
+        nodo.style.color = 'green'
+    }

@@ -14,9 +14,9 @@
 
             <h2>Filtrar por precios</h2>
             <label for="min">Min:</label>
-            <input type="number" id="min" name="min" required>
+            <input type="number" id="min" name="min" oninput="validarPrecioMin()" required>
             <label for="max">Max:</label>
-            <input type="number" id="max" name="max" required><br><br>
+            <input type="number" id="max" name="max" oninput="validarPrecioMax()" required><br><br>
         
             <input type="submit" name="action" class="button" value="filtrar" onclick=preciosFiltrados()>
 
