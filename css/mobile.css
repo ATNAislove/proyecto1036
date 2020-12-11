@@ -1,0 +1,66 @@
+html{
+    min-height: 100%;
+    position:relative;
+  }
+  body {
+    margin: 0;
+  }
+  h1{
+      text-align: center;
+      color:  #008080; 
+  }
+  
+  h2{
+    text-align: center;
+    color:   #333; 
+    
+  }
+  
+  label{
+      font: 100% arial;
+      text-align: center;
+  }
+  li{
+    list-style:none
+  }
+  
+  p{
+    font: 100% arial;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 40px;
+  }
+  
+  .logo{
+    width: 500px;
+    height: auto;
+    display:block;
+    margin:auto;
+  }
+  
+  
+  
+  form{
+      text-align: center;
+      font: 100% arial;
+  }
+  
+  html, body {
+    margin: 0px;
+    padding: 0px;
+    background: url("/img/fondo4.jpg");
+    /* Para cambiar la opacidad es con  opacity: 0.5; */
+  }
+
+
+  .list{
+      background-color: black;
+      color: white;
+  }
+  #carr{
+    width: 100%; 
+    height: auto; 
+    text-align:center;
+  }

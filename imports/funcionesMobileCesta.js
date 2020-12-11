@@ -36,10 +36,11 @@ function productos(){
 }
 function mostrar(producto){
   let nodo = document.createElement('ons-list-item');
-  let span = document.createElement('span');
-  span.className = 'miItem';
+  nodo.className = 'list-item';
+  let div = document.createElement('div');
+  div.className = 'list-item__center';
   if(producto!=""){
-    span.textContent = producto + ' ';
+    div.textContent = producto + ' ';
     document.createElement('br');
   }else{ /*si el contenido es vacio return */
     //Crear la alerta indicando que la cesta está vacía
@@ -53,10 +54,10 @@ function mostrar(producto){
   let nodo2 = document.createElement('ons-button');
   nodo2.textContent = 'Borrar';
   nodo2.className = 'button';
-  span.appendChild(nodo2);
+  div.appendChild(nodo2);
   nodo2.onclick = eliminarNodo.bind(nodo2);
   //borra igual sin el bind
-  nodo.appendChild(span);
+  nodo.appendChild(div);
   document.getElementById('compra').appendChild(nodo);    
 }
 //borra los elementos guardados en la cesta de localStorage
