@@ -64,12 +64,21 @@ function mostrar(producto){
 function vaciarCesta(){
   let lista=[];
   localStorage.setItem('cesta',JSON.stringify(lista));
+  vaciarLista();
 }
 function vaciarLista(){
-
+  let li = document.getElementById('compra');
+  let padre = li.parentNode;
+  li.remove();
+  li= document.createElement('ons-list');
+  li.className = 'list list--noborder';
+  li.id = 'compra';
+  li.style='text-align:center';
+  padre.insertBefore(li,padre.firstChild);
   //problemas de concurrencia cambiar todo el codigo y buscar solucion
-  let li = document.getElementById('compra').childNodes;
+  /*let li = document.getElementById('compra').childNodes;
   for(let elem of li){
+    console.log(elem);
     elem.remove();
     console.log('me ejecuto');
   }
@@ -80,8 +89,10 @@ function vaciarLista(){
     li.firstChild.remove();
 
   }
+  
   console.log(li);
   console.log('hey');
+  */
   /*for( let i=0; i<=li.length+1;i++){
     li[i].remove();
     console.log('me ejecuto')
@@ -91,7 +102,6 @@ function vaciarLista(){
 function cesta(){
   console.log('cesta entra')
   console.log(localStorage.getItem('cesta'));
-  vaciarLista();
   let lista = JSON.parse(localStorage.getItem('cesta'));
   if(lista && lista.length>0){
       lista.forEach(producto => mostrar(producto));

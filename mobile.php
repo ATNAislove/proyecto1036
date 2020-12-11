@@ -37,7 +37,7 @@
     </ons-toolbar>
 
     <ons-tabbar swipeable id="appTabbar" position="auto"> 
-      <ons-tab label="Productos" icon="ion-home" page="page1.html" active></ons-tab>
+      <ons-tab label="Productos" icon="ion-home" page="page1.html" onclick="vaciarLista()" active></ons-tab>
       <ons-tab label="Cesta" icon="ion-edit" page="page2.html" onclick="cesta()"></ons-tab>
     </ons-tabbar>
 
@@ -72,9 +72,10 @@
     </ons-toolbar>
    
     <div id="caja" class="caja_flotante">
+    <br>
+      <br>
     <form action="?action=comprar" method="GET">
-      <br>
-      <br>
+      
       
       <ons-list id="compra" class="list list--noborder" style="text-align:center">
       
