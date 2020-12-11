@@ -38,7 +38,7 @@
 
     <ons-tabbar swipeable id="appTabbar" position="auto"> 
       <ons-tab label="Productos" icon="ion-home" page="page1.html" active></ons-tab>
-      <ons-tab label="Cesta" icon="ion-edit" page="page2.html"></ons-tab>
+      <ons-tab label="Cesta" icon="ion-edit" page="page2.html" onclick="cesta()"></ons-tab>
     </ons-tabbar>
 
   </ons-page>
@@ -98,34 +98,18 @@
   
   /* Funciones para mover el carrusel */
   var prev = function() {
-    var carousel = document.getElementById('carousel');
+    var carousel = document.getElementById('carr');
     carousel.prev();
   };
 
   var next = function() {
-    var carousel = document.getElementById('carousel');
+    var carousel = document.getElementById('carr');
     carousel.next();
   };
-
-  /* Función para añadir un elemento al carrusel */
-  function addItem(color, text){
-    let nodo = document.createElement('ons-carousel-item')
-    nodo.style.backgroundColor = color
-    nodo.innerHTML = `<div style="text-align: center; font-size: 30px; margin-top: 20px; color: white;">${text}</div>`
-    document.getElementById('carousel').appendChild(nodo)
-  }
-
-  /* Ejemplo para añadir elementos al carrusel cuando se carga una página */
-  document.addEventListener("init", function(event) {
-        var page = event.target;
-        if( page.matches('#page1') ) { 
-           addItem('gray','GRIS')
-           addItem('red','ROJO')
-        }
-  })
+ 
 
 </script>
 <script src="/imports/funcionesMobile.js"></script>
-<script src="/imports/funcionesCesta.js"></script>
+<script src="/imports/funcionesMobileCesta.js"></script>
 </body>
 </html>

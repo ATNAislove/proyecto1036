@@ -21,7 +21,7 @@ html{
       text-align: center;
   }
   li{
-    list-style:none
+    list-style:none;
   }
   
   p{
@@ -55,10 +55,10 @@ html{
   }
 
 
-  .list{
-      background-color: black;
-      color: white;
+  /*.list{
+      
   }
+  */
   #carr{
     width: 100%; 
     height: auto; 

@@ -65,8 +65,33 @@ function vaciarCesta(){
   let lista=[];
   localStorage.setItem('cesta',JSON.stringify(lista));
 }
+function vaciarLista(){
+
+  //problemas de concurrencia cambiar todo el codigo y buscar solucion
+  let li = document.getElementById('compra').childNodes;
+  for(let elem of li){
+    elem.remove();
+    console.log('me ejecuto');
+  }
+  console.log(li);
+  li = document.getElementById('compra');
+  if(li.firstChild){
+    console.log('existe');
+    li.firstChild.remove();
+
+  }
+  console.log(li);
+  console.log('hey');
+  /*for( let i=0; i<=li.length+1;i++){
+    li[i].remove();
+    console.log('me ejecuto')
+  }*/
+}
 //Muestra los elementos que hay en la cesta
-(function(){
+function cesta(){
+  console.log('cesta entra')
+  console.log(localStorage.getItem('cesta'));
+  vaciarLista();
   let lista = JSON.parse(localStorage.getItem('cesta'));
   if(lista && lista.length>0){
       lista.forEach(producto => mostrar(producto));
@@ -74,7 +99,7 @@ function vaciarCesta(){
       let productes = document.getElementById("items");
       productes.value = productos();
   }
-})()
+}
 
 //Función que cuente el número de productos
 function contarProductos(){
