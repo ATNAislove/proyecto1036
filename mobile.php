@@ -11,19 +11,12 @@
 <ons-navigator id="appNavigator" swipeable swipe-target-width="80px">
   <ons-page>
     <ons-splitter id="appSplitter">
-      <ons-splitter-side id="sidemenu" page="sidemenu.html" swipeable side="right" collapse="" width="260px"></ons-splitter-side>
       <ons-splitter-content page="tabbar.html"></ons-splitter-content>
     </ons-splitter>
   </ons-page>
 </ons-navigator>
 
-<template id="sidemenu.html">
-   <ons-page>
-    <ons-list-title>Menú</ons-list-title>
-    <ons-list>
-       <ons-list-item onclick="fn.loadView(0)">Hola</ons-list-item>
-    </ons-list>
-</template>
+
 
 <template id="tabbar.html">
   <ons-page id="tabbar-page">
