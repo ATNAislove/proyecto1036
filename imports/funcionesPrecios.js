@@ -25,10 +25,6 @@ function items(element){
     carrousel.appendChild(nodo);
 }
 
-
-
-
-
 //Función añadir elementos a la cesta
 function anyadir(){
   let producto = this.parentNode.id;
@@ -135,7 +131,7 @@ function mostrarEnPantalla(){
 fetch('./includes/datos.php')
 .then(response => response.json())
 .then(data => insertarOpciones(data))
-.catch(err => console.log(err))
+.catch(err => console.log(err));
 
   fetch('./includes/datos.php')
   .then(response => {if(!response.ok){
