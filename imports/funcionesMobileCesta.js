@@ -6,12 +6,8 @@ function eliminarNodo(){
         for (var i=0; i<lista.length; i++){
           var elemento = parseInt(lista[i]);
           var elementoABorrar = parseInt(this.parentNode.textContent.slice(0,-6));
-          console.log(elemento == elementoABorrar);
-          console.log(elemento);
-          console.log(elementoABorrar);
             if (elemento == elementoABorrar) {
               lista.splice(i,1);
-              console.log(lista);
               break;
             }
         }
@@ -26,13 +22,13 @@ function eliminarNodo(){
 }
 function productos(){
   let lista = JSON.parse(localStorage.getItem('cesta'));
-  let cadena = "";
+  let cadena = [];
   if(lista && lista.length>0){
-    cadena=lista[0].toString();
-    for (let i=1; i<lista.length;i++){
-      cadena = cadena.concat("-" + lista[i]);
+    //cadena=lista[0].toString();
+    for (let i=0; i<lista.length;i++){
+      cadena.push(lista[i]);
     }
-  }return cadena;
+  }return cadena.join('-');
 }
 function mostrar(producto){
   let nodo = document.createElement('ons-list-item');
@@ -66,6 +62,7 @@ function vaciarCesta(){
   localStorage.setItem('cesta',JSON.stringify(lista));
   vaciarLista();
 }
+//borramos la lista y la volvemos a crear
 function vaciarLista(){
   let li = document.getElementById('compra');
   let padre = li.parentNode;
@@ -75,28 +72,6 @@ function vaciarLista(){
   li.id = 'compra';
   li.style='text-align:center';
   padre.insertBefore(li,padre.firstChild);
-  //problemas de concurrencia cambiar todo el codigo y buscar solucion
-  /*let li = document.getElementById('compra').childNodes;
-  for(let elem of li){
-    console.log(elem);
-    elem.remove();
-    console.log('me ejecuto');
-  }
-  console.log(li);
-  li = document.getElementById('compra');
-  if(li.firstChild){
-    console.log('existe');
-    li.firstChild.remove();
-
-  }
-  
-  console.log(li);
-  console.log('hey');
-  */
-  /*for( let i=0; i<=li.length+1;i++){
-    li[i].remove();
-    console.log('me ejecuto')
-  }*/
 }
 //Muestra los elementos que hay en la cesta
 function cesta(){
@@ -124,3 +99,21 @@ function contarProductos(){
   document.createElement('p') = 0;
   return 0;
 }
+function comprar(){
+  let producto = document.getElementById('items').value;
+    
+  fetch('../mobile/comprar.php?productes=' + producto)
+  .then(response => {if(!response.ok){
+    console.log('error'); throw response.statusText;
+    }else return response.json();})
+  .then(json => {console.log(json);
+      if(json.resultado == 'KO'){
+        document.getElementById('dialog-1').show();
+      }
+        vaciarCesta();
+  });
+  
+}
+var hideAlertDialog = function() {
+  document.getElementById('dialog-1').hide();
+};

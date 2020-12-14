@@ -28,12 +28,7 @@
 <template id="tabbar.html">
   <ons-page id="tabbar-page">
     <ons-toolbar>
-      <div class="center">MI TIENDA</div>
-      <div class="right">
-        <ons-toolbar-button onclick="fn.toggleMenu()">
-          <ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
-        </ons-toolbar-button>
-      </div>
+      <div class="center"><img src='img/black2logoAthenaStyle.png' style='width:80px;height:45px;'></img></div>
     </ons-toolbar>
 
     <ons-tabbar swipeable id="appTabbar" position="auto"> 
@@ -74,7 +69,7 @@
     <div id="caja" class="caja_flotante">
     <br>
       <br>
-    <form action="?action=comprar" method="GET">
+    <!--<form action="?action=comprar" method="GET">-->
       
       
       <ons-list id="compra" class="list list--noborder" style="text-align:center">
@@ -82,18 +77,27 @@
       </ons-list>
       <br>
       <div style="text-align:center">
-      <input type="submit" name ="action" value="comprar" class="button" onclick="vaciarCesta()"></input>
+      <input type="submit" name ="action" value="comprar" class="button" onclick="comprar()"></input>
       <input id="items" hidden name="productes" value=""></input>
       <input type="button" value="vaciar cesta" class="button" onclick="vaciarCesta()">
       </div>
       <br><br>
       
-    </form>
+    <!--</form>-->
 
   </div>
   </ons-page>
 
 </template>
+<ons-alert-dialog id="dialog-1">
+  <div class="alert-dialog-title">Alerta!</div>
+  <div class="alert-dialog-content">
+    Ha ocurrido un error!
+  </div>
+  <div class="alert-dialog-footer">
+    <ons-alert-dialog-button onclick="hideAlertDialog()">Aceptar</ons-alert-dialog-button>
+  </div>
+</ons-alert-dialog>
   
 <script>
   
