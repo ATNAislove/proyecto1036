@@ -60,16 +60,44 @@ function vaciarCarrousel(){
   };
   
 }
+//inserta las opciones en el buscador
+function insertarOpciones(L){
+  //si no le ponemos var dentro de una funcion es global
+  //para hacerla global si no estas en una funcion es con var
+  Prod2ID = {}
+  //para cada producto creamos un elemento opcion con el nombre del producto y
+  // lo almacenamos con su id en Prod2ID, luego lo añadimos a la pagina
+  L.forEach(x => {
+    let n = document.createElement('option');
+    n.value = x.nombre;
+    Prod2ID[x.nombre] = x.produc_id;
+    document.getElementById('prendas').appendChild(n);
+  })
+}
+//muestra en pantalla el producto seleccionado en el buscador
+function mostrarEnPantalla(){
+  let $nombre = document.getElementById('buscador').value;
+  if(!Prod2ID[$nombre]) return;
+  try{
+    document.getElementById(Prod2ID[$nombre]).scrollIntoView();
+  }catch(error){
+    vaciarCarrousel();
+    todosProductos();
+    //document.getElementById(Prod2ID[$nombre]).scrollIntoView();
+  }
+}
 
-//el primer fetch sirve para insertar las opciones del buscador
-//con el segundo fetch mostramos todos los productos
+//el fetch sirve para insertar las opciones del buscador
+//y ademas mostramos todos los productos en el carrousel
 (function(){
 
 fetch('../includes/datos.php')
 .then(response => {if(!response.ok){
     console.log('error'); throw response.statusText;
     }else return response.json();})
-.then(json => auxiliar(json));
+.then(json => {auxiliar(json);
+              insertarOpciones(json);})
+.catch(err => console.log(err));
 })()
 
 

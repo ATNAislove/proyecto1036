@@ -41,7 +41,8 @@
 
 <template id="page1.html">
   <ons-page id="page1">
-   
+  <input class="text-input" list="prendas" name="buscador" id="buscador" placeholder="Buscador" onchange=mostrarEnPantalla()></input>
+  <datalist id="prendas"></datalist> 
    <ons-toolbar>
     <div class="left">
       <ons-toolbar-button onclick="prev()">
@@ -54,9 +55,9 @@
         <ons-icon icon="md-chevron-right"></ons-icon>
       </ons-toolbar-button>
     </div>
-  </ons-toolbar>
+    </ons-toolbar>
     <ons-carousel swipeable overscrollable auto-scroll id="carr">
-  </ons-carousel>
+    </ons-carousel>
   </ons-page>
 </template>
 

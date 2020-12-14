@@ -39,7 +39,9 @@ p{
   display:block;
   margin:auto;
 }
-
+input, ons-page{
+  text-align: center;
+}
 
 
 form{
