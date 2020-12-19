@@ -21,12 +21,13 @@
 <template id="tabbar.html">
   <ons-page id="tabbar-page">
     <ons-toolbar>
-      <div class="center"><img src='img/black2logoAthenaStyle.png' style='width:80px;height:45px;'></img></div>
+      <div class="center"><img src='img/blacklogoAthenaStyle.png' style='width:80px;height:45px;'></img></div>
     </ons-toolbar>
 
     <ons-tabbar swipeable id="appTabbar" position="auto"> 
       <ons-tab label="Productos" icon="ion-home" page="page1.html" onclick="vaciarLista()" active></ons-tab>
       <ons-tab label="Cesta" icon="ion-edit" page="page2.html" onclick="cesta()"></ons-tab>
+
     </ons-tabbar>
 
   </ons-page>

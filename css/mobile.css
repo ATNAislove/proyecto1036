@@ -70,3 +70,7 @@ text-align:center;
 template{
   background: url("/img/fondo4.jpg");
 }
+
+.caja_flotante, ons-carousel {
+  background: url("/img/fondo4.jpg");
+}

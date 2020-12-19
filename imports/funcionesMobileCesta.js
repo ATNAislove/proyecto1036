@@ -75,8 +75,6 @@ function vaciarLista(){
 }
 //Muestra los elementos que hay en la cesta
 function cesta(){
-  console.log('cesta entra')
-  console.log(localStorage.getItem('cesta'));
   let lista = JSON.parse(localStorage.getItem('cesta'));
   if(lista && lista.length>0){
       lista.forEach(producto => mostrar(producto));
